@@ -5,6 +5,7 @@
 #desc_append |Name: Matthew Cooper                                                                |
 #desc_append |Age: 25 years                                                                       |
 #desc_append |Quests Completed: ${stat,Matthew,completedquests} of 6                              |
+#desc_append |Safezone Occupation: Overseer                                                       |
 #desc_append |                                                                                    |
 #desc_append |                                 Description                                        |
 #desc_append |                                                                                    |

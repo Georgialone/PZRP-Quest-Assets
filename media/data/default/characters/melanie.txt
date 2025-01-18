@@ -1,0 +1,14 @@
+#name Melanie|Melanie
+#set_stat Melanie|completedquests|0
+
+#desc                                          Biography
+#desc_append |Name: Melanie Ross                                                                  |
+#desc_append |Age: 25 years                                                                       |
+#desc_append |Quests Completed: ${stat,Melanie,completedquests} of 5                              |
+#desc_append |Safezone Occupation: Doctor                                                         |
+#desc_append |                                                                                    |
+#desc_append |                                 Description                                        |
+#desc_append |                                                                                    |
+#desc_append |When the world fell apart, Melanie became a beacon of hope, using her medical       |
+#desc_append |expertise to save lives all around Knox Country. Melanie is strong willed and       |
+#desc_append |empathetic, often placing the well being of others above her own.                   |
