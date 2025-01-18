@@ -1,0 +1,38 @@
+#is_flag matthew_intro,true
+    #jump loop
+
+*intro 
+#m Matthew|"Acquaintance"
+#set_flag matthew_intro,true
+#reveal Matthew
+#exit
+
+*loop
+#m Matthew|"Hey there, survivor. What can I do for you?"
+#choice
+    first|Where am I?
+    second|What quests do you have for me?
+    three|Leave the safezone.
+    exit|Leave
+
+*first
+#m Matthew|"This is the Knox Country safezone."
+#m Matthew|"Here you can buy items from traders that you rescue, take a break from fighting zombies, and accept missions."
+#choice
+    back|I get it.
+
+*second
+
+*three
+#m Matthew|"Where would you like to travel?"
+#choice
+    rosewood|Rosewood 
+    muldraugh|Muldraugh 
+    march_rigde|March Rigde 
+    back|Leave
+
+*back
+#jump loop
+
+*exit
+#exit 
