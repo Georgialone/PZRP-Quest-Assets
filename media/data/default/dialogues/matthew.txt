@@ -12,8 +12,8 @@
 #m Matthew|"Hey there, survivor. What can I do for you?"
 #choice
     first_choice|Where am I?
-    second_choice|What quests do you have for me?
-    three_choice|Leave the safezone.
+    second_choice|Leave the safezone.
+    three_choice|What quests do you have for me?
     exit|Leave
 
 *first_choice
@@ -23,14 +23,14 @@
     back|I get it.
 
 *second_choice
-
-*three_choice
 #m Matthew|"Where would you like to travel?"
 #choice
     rosewood|Rosewood 
     muldraugh|Muldraugh 
     march_rigde|March Rigde 
-    back|Leave
+    back|Leave 
+*three_choice
+
 
 *back
 #jump loop
