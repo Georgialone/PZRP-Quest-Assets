@@ -2,10 +2,10 @@
 #set_stat Matthew|completedquests|0
 
 #desc Name: Matthew Cooper
-#desc_append |
+#desc_append |                                                                                   |
 #desc_append Before the outbreak, Matthew was an urban planner, a profession that proved
 #desc_append invaluable when he established one of the most secure and self-sufficient safe zones
 #desc_append in the region. His ultimate goal is not just survival, but to lay the groundwork for
 #desc_append a future where humanity can rebuild.
-#desc_append |
+#desc_append |                                                                                   |
 #desc_append Quests Completed: ${stat,Matthew,completedquests} / 6
