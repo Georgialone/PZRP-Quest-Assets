@@ -28,18 +28,19 @@
     rosewood|Rosewood 
     muldraugh|Muldraugh 
     march_rigde|March Rigde 
-    back|Leave 
+    back|Leave
+
 *three_choice
 #is_quest talk_Melanie|locked
     #m Matthew|"Help me with Melanie"
     #choice
-        accept|Ok
+        accept_talk_Melanie|Ok
         back|No
     
 
-*accept
+*accept_talk_Melanie
 #m Matthew|"Thank you, good luck."
-#quest_unlcok talk_Melanie
+#quest_unlock talk_Melanie
 #task_unlock talk_Melanie|t1
 #exit
 

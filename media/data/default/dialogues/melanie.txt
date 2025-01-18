@@ -10,6 +10,7 @@
 *gowithme
 #m Melanie|"Ok"
 #fade_out black
+#sfx walk_melanie
 #set_flag melanie_intro,true
 #stat_inc Matthew|completedquests|0
 #set_flag talk_Melanie_dialog,true

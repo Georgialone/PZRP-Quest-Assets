@@ -1,0 +1,3 @@
+*talk_Melanie
+#name Doctor's Orders
+#desc I'm glad that you were able to help out. Building this safezone isn't going to be easy, but in time, we should be able to get things up and running. Our first order of business is medical care. We've seen what's out there, and getting injured is something that we cannot afford. When I was taking refuge with some survivors early on, I heard some talk of a traveling doctor. She was last sighted at an army quarters east of Rosewood. See if you can track her down.
