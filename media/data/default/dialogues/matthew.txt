@@ -4,6 +4,7 @@
 *intro 
 #m Matthew|"Acquaintance"
 #set_flag matthew_intro,true
+#stat_inc Matthew|completedquests|0
 #reveal Matthew
 #exit
 
