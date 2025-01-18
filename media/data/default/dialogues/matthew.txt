@@ -10,20 +10,20 @@
 *loop
 #m Matthew|"Hey there, survivor. What can I do for you?"
 #choice
-    first|Where am I?
-    second|What quests do you have for me?
-    three|Leave the safezone.
+    first_choice|Where am I?
+    second_choice|What quests do you have for me?
+    three_choice|Leave the safezone.
     exit|Leave
 
-*first
+*first_choice
 #m Matthew|"This is the Knox Country safezone."
 #m Matthew|"Here you can buy items from traders that you rescue, take a break from fighting zombies, and accept missions."
 #choice
     back|I get it.
 
-*second
+*second_choice
 
-*three
+*three_choice
 #m Matthew|"Where would you like to travel?"
 #choice
     rosewood|Rosewood 
