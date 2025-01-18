@@ -30,6 +30,18 @@
     march_rigde|March Rigde 
     back|Leave 
 *three_choice
+#is_quest talk_Melanie|locked
+    #m Matthew|"Help me with Melanie"
+    #choice
+        accept|Ok
+        back|No
+    
+
+*accept
+#m Matthew|"Thank you, good luck."
+#quest_unlcok talk_Melanie
+#task_unlock talk_Melanie|t1
+#exit
 
 
 *back
