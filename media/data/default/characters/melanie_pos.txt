@@ -1,0 +1,5 @@
+#is_flag melanie_intro,false
+    #npc_create Melanie|npc_matthew_test.png|9103,11821,0
+    #exit
+#npc_create Melanie|npc_matthew_test.png|9104,11822,0
+#exit
