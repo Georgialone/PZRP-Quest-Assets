@@ -1,0 +1,14 @@
+#is_flag melanie_intro,true
+    #jump loop
+
+*intro
+#m Melanie|"Hi, i am Melony"
+#choice
+    gowithme|Go with me
+    exit|Leave
+
+*gowithme
+#m Melanie|"Ok"
+
+*exit
+#exit
