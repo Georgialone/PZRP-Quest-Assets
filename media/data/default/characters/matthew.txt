@@ -1,6 +1,9 @@
 #name Matthew|Matthew
-#set_stat Matthew|reputation|0
+#set_stat Matthew|completedquests|0
 
-#desc Name: Matthew
-#desc_append Age: 30
-#desc_append Your description
+#desc Name: Matthew Cooper
+#desc_append Quests Completed: ${stat,Matthew,completedquests}/6
+#desc_append Before the outbreak, Matthew was an urban planner, a profession that proved
+#desc_append invaluable when he established one of the most secure and self-sufficient safe zones
+#desc_append in the region. His ultimate goal is not just survival, but to lay the groundwork for
+#desc_append a future where humanity can rebuild.
