@@ -28,7 +28,11 @@
     rosewood|Rosewood 
     muldraugh|Muldraugh 
     march_rigde|March Rigde 
+    start_ng|Start game
     back|Leave
+
+*start_ng
+#start_ngp
 
 *three_choice
 #is_quest talk_Melanie|locked
@@ -49,4 +53,5 @@
 #jump loop
 
 *exit
+
 #exit 
