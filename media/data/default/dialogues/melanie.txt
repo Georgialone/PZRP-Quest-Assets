@@ -17,3 +17,10 @@
 #reveal Melanie
 #exit
 
+*loop
+#m Melanie|"Hi there. What can I help you with?"
+#choice
+    trade_melanie|Trade 
+    quests_melanie|What quests do you have for me?
+    exit|Leave
+
