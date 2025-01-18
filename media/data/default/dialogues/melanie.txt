@@ -13,6 +13,7 @@
 #stat_inc Matthew|completedquests|0
 #set_flag talk_Melanie_dialog,true
 #npc_update Melanie
+#m *Knock knock*
 #fade_in
 #reveal Melanie
 #exit
