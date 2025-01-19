@@ -1,0 +1,10 @@
+#name Captain|Captain
+#set_stat Captain|completedquests|0
+
+#desc Name: Captain Michael Hess
+#desc_append |                                                                                     |         
+#desc_append Michael was a decorated army officer before the fall of civilization,
+#desc_append specializing in logistics and strategic operations. 
+#desc_append His training and survival skills have earned him quite the reputation at the safezone.
+#desc_append |                                                                                     |
+#desc_append Quests Completed: ${stat,Captain,completedquests} / 6                             
