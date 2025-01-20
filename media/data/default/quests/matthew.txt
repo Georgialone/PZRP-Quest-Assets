@@ -6,3 +6,12 @@
         #set RaiseFlag|talk_Melanie_dialog
         #action Reward|Base.Money,15,common
         #action CompleteQuest|talk_Melanie
+
+#quest talk_Captain
+    #task t1 
+        #set GotoLocation|10670,10626,0|building|true
+        #action UnlockTask|talk_Captain|t2
+    #task t2
+        #set RaiseFlag|talk_Captain_dialog
+        #action Reward|Base.Money,15,common
+        #action CompleteQuest|talk_Captain

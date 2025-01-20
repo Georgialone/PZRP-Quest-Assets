@@ -40,12 +40,23 @@
     #choice
         accept_talk_Melanie|Ok
         back|No
+#is_quest talk_Melanie|unlocked,completed
+    #m Matthew|"Help me with Captain"
+    #choice
+        accept_talk_Captain|Ok
+        back|No
     
 
 *accept_talk_Melanie
 #m Matthew|"Thank you, good luck."
 #quest_unlock talk_Melanie
 #task_unlock talk_Melanie|t1
+#exit
+
+*accept_talk_Captain
+#m Matthew|"Thank you, good luck."
+#quest_unlock talk_Captain
+#task_unlock talk_Captain|t1
 #exit
 
 

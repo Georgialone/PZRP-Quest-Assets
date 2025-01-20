@@ -2,3 +2,8 @@
 #name To find Melanie's house.
 *talk_Melanie_t2
 #name Talking to Melanie.
+
+*talk_Captain_t1
+#name To find Captain
+*talk_Captain_t2
+#name Talking to Captain

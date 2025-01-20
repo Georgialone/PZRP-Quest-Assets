@@ -1,0 +1,24 @@
+#is_flag captain_intro,true
+    #jump loop
+
+*intro
+#m Captain|"Hello there"
+#m Go with me
+#fade_out black
+#sfx walk_melanie
+#set_flag captain_intro,true
+#stat_inc Matthew|completedquests|1
+#set_flag talk_Captain_dialog,true
+#npc_update Captain
+#m *Knock knock* 
+#set_flag achivment_talk_Captain,true
+#fade_in
+#reveal Captain
+#exit
+
+*loop
+#m Captain|"Hi there. What can I help you with?"
+#choice
+    trade_melanie|Trade 
+    quests_melanie|What quests do you have for me?
+    exit|Leave

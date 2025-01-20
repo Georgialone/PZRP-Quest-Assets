@@ -1,3 +1,7 @@
 *talk_Melanie
 #name Doctor's Orders
 #desc I'm glad that you were able to help out. Building this safezone isn't going to be easy, but in time, we should be able to get things up and running. Our first order of business is medical care. We've seen what's out there, and getting injured is something that we cannot afford. When I was taking refuge with some survivors early on, I heard some talk of a traveling doctor. She was last sighted at an army quarters east of Rosewood. See if you can track her down.
+
+*talk_Captain
+#name Medal Of Honor
+#desc Doctor Ross and I were flipping through some radio channels and we overheard some gunshots and yelling. We called out and we surprisingly got a response. Apparently there was an ambush at a nearby military checkpoint and a large swarm of infected had breached the line of defense. The voice on the radio identified himself as Captain Michael Hess. He said his platoon was falling back to a gas station in Muldraugh. See if you can make contact.

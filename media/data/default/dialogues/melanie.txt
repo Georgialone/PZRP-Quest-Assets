@@ -10,7 +10,7 @@
 #fade_out black
 #sfx walk_melanie
 #set_flag melanie_intro,true
-#stat_inc Matthew|completedquests|0
+#stat_inc Matthew|completedquests|1
 #set_flag talk_Melanie_dialog,true
 #npc_update Melanie
 #m *Knock knock*
