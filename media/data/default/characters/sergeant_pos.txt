@@ -1,2 +1,6 @@
-#npc_create Sergeant|sergeant_normal|idle|8137,11740,0|S
-#exit
+#is_quest talk_Sergeant|unlocked
+    #is_flag Sergeant_intro,false
+        #npc_create Sergeant|sergeant_normal|idle|5466,9515,0|S
+        #exit
+    #npc_create Sergeant|sergeant_normal|idle|8151,11745,0|S
+    #exit

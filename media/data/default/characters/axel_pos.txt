@@ -1,2 +1,6 @@
-#npc_create Axel|axel_normal|idle|8140,11740,0|S
-#exit
+#is_quest talk_Axel|unlocked
+    #is_flag axel_intro,false
+        #npc_create Axel|axel_normal|idle|10180,10931,0|S
+        #exit
+    #npc_create Axel|axel_normal|idle|8139,11740,0|S
+    #exit

@@ -15,3 +15,39 @@
         #set RaiseFlag|talk_Captain_dialog
         #action Reward|Base.Money,15,common
         #action CompleteQuest|talk_Captain
+
+#quest talk_Axel
+    #task t1
+        #set GotoLocation|10180,10931,0|building|true
+        #action UnlockTask|talk_Axel|t2
+    #task t2
+        #set RaiseFlag|talk_Axel_dialog
+        #action Reward|Base.Money,15,common
+        #action CompleteQuest|talk_Axel
+
+#quest talk_Sergeant
+    #task t1 
+        #set GotoLocation|5466,9515,0|building|true
+        #action UnlockTask|talk_Sergeant|t2
+    #task t2
+        #set RaiseFlag|talk_Sergeant_dialog
+        #action Reward|Base.Money,15,common
+        #action CompleteQuest|talk_Sergeant
+
+#quest talk_Nicole
+    #task t1 
+        #set GotoLocation|10339,12784,0|building|true
+        #action UnlockTask|talk_Nicole|t2
+    #task t2
+        #set RaiseFlag|talk_Nicole_dialog
+        #action Reward|Base.Money,15,common
+        #action CompleteQuest|talk_Nicole
+    
+#quest talk_Jack
+    #task t1 
+        #set GotoLocation|10339,12784,0|building|true
+        #action UnlockTask|talk_Jack|t2
+    #task t2
+        #set RaiseFlag|talk_Jack_dialog
+        #action Reward|Base.Money,15,common
+        #action CompleteQuest|talk_Jack

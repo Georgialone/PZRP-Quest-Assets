@@ -1,2 +1,6 @@
-#npc_create Jack|jack_normal|idle|8138,11740,0|S
-#exit
+#is_quest talk_Jack|unlocked
+    #is_flag jack_intro,false
+        #npc_create Jack|jack_normal|idle|10760,10548,0|S
+        #exit
+    #npc_create Jack|jack_normal|idle|8151,11745,0|S
+    #exit

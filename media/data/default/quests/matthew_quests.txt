@@ -5,3 +5,19 @@
 *talk_Captain
 #name Medal Of Honor
 #desc Doctor Ross and I were flipping through some radio channels and we overheard some gunshots and yelling. We called out and we surprisingly got a response. Apparently there was an ambush at a nearby military checkpoint and a large swarm of infected had breached the line of defense. The voice on the radio identified himself as Captain Michael Hess. He said his platoon was falling back to a gas station in Muldraugh. See if you can make contact.
+
+*talk_Axel
+#name Distress Call
+#desc It's been fairly dead in the region. That changed three hours ago. An emergency flare was fired east of our position. We're unsure exactly where it came from, but currently we believe that the flare gun was shot nearby Muldraugh, specifically, an industrial park. We have no idea if this flare was an accident, or if this was done intentionally. Regardless, we think that you should go see what is going on.
+
+*talk_Sergeant
+#name Missing In Action
+#desc According to Captain Hess, during the chaos of the checkpoint attack, his platoon was split in two. The surviving members of the second group fled north of Rosewood. Among the survivors was the weapons sergeant, Lily Shaw. The captain says that if anything, Lily is likely heading to resupply on ammo and weapons in an attempt to avenge the fallen. A local map shows a military surplus store north west of here in the Doe Valley region. Check it out and see if she's there.
+
+*talk_Nicole
+#name Faith
+#desc There are still people out there! We recently were in contact with a survivor in the area named Nicole. She didn't tell us much, but we know that her camp was attacked and she fled to March Ridge. When we heard from her last, she told us that she was hiding in a church. We told her that we'd come and try to find her, but when we radioed in, we didn't get any response. We have no clue if she's even still alive or in that church, but we should check anyway.
+
+*talk_Jack
+#name Happy Hour
+#desc Multiple gunshots were heard near our location. We checked walkie talkie channels and sure enough, there was someone pleading for help. He told us that his name was Jack and that his car broke down near Muldraugh. We told him to find cover somewhere and that we would pick him up. He is currently taking shelter at a local tavern. Head over to Muldraugh and rescue him.

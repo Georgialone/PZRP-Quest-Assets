@@ -3,12 +3,15 @@ require "Scripting/MFManager"
 local captain_model = {
     name = "captain_normal",
     script = "Base.MaleFolk",
-    beard = "Long",
-    haircut = { "LeftParting", {0.10588235408067703, 0.09019608050584793, 0.08627451211214066} },
+    beard = "BeardOnly",
+    haircut = { "Bald", {0.6509804129600525, 0.6431372761726379, 0.6235294342041016} },
     clothes = {
-        { "Base.Tshirt_DefaultTEXTURE_TINT", {0.3607843220233917, 0.14509804546833038, 0.14509804546833038} },
-        { "Base.Trousers_Denim", 0 },
-        { "Base.Shoes_TrainerTINT", {0.3607843220233917, 0.250980406999588, 0.14509804546833038} }
+        { "Base.Hat_Beret", {0.20000000298023224, 0.20000000298023224, 0.20000000298023224} },
+        "Base.Tshirt_Profession_VeterenGreen",
+        "Base.Shirt_CamoGreen",
+        "Base.Trousers_CamoGreen",
+        "Base.Shoes_ArmyBoots",
+        "Base.Glasses_Aviators"
     }
 };
 
