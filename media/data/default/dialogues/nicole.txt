@@ -1,0 +1,24 @@
+#is_flag nicole_intro,true
+    #jump loop
+
+*intro
+#m Nicole|"Hello there"
+#m Go with me
+#fade_out black
+#sfx walk_melanie
+#set_flag nicole_intro,true
+#stat_inc Matthew|completedquests|1
+#set_flag talk_Nicole_dialog,true
+#npc_update Nicole
+#m *Knock knock* 
+#set_flag achivment_talk_Nicole,true
+#fade_in
+#reveal Nicole
+#exit
+
+*loop
+#m Nicole|"Hi there. What can I help you with?"
+#choice
+    trade_nicole|Trade 
+    quests_nicole|What quests do you have for me?
+    exit|Leave

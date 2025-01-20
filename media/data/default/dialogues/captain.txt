@@ -19,6 +19,6 @@
 *loop
 #m Captain|"Hi there. What can I help you with?"
 #choice
-    trade_melanie|Trade 
-    quests_melanie|What quests do you have for me?
+    trade_captain|Trade 
+    quests_captain|What quests do you have for me?
     exit|Leave

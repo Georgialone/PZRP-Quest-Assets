@@ -1,0 +1,24 @@
+#is_flag sergeant_intro,true
+    #jump loop
+
+*intro
+#m Sergeant|"Hello there"
+#m Go with me
+#fade_out black
+#sfx walk_melanie
+#set_flag sergeant_intro,true
+#stat_inc Matthew|completedquests|1
+#set_flag talk_Sergeant_dialog,true
+#npc_update Sergeant
+#m *Knock knock* 
+#set_flag achivment_talk_Sergeant,true
+#fade_in
+#reveal Sergeant
+#exit
+
+*loop
+#m Sergeant|"Hi there. What can I help you with?"
+#choice
+    trade_sergeant|Trade 
+    quests_sergeant|What quests do you have for me?
+    exit|Leave

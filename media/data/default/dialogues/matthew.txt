@@ -45,7 +45,27 @@
     #choice
         accept_talk_Captain|Ok
         back|No
-    
+#is_quest talk_Captain|unlocked,completed
+    #m Matthew|"Help me with Sergeant"
+    #choice
+        accept_talk_Sergeant|Ok
+        back|No
+#is_quest talk_Sergeant|unlocked,completed
+    #m Matthew|"Help me with Nicole"
+    #choice
+        accept_talk_Nicole|Ok
+        back|No
+#is_quest talk_Nicole|unlocked,completed
+    #m Matthew|"Help me with Axel"
+    #choice
+        accept_talk_Axel|Ok
+        back|No
+#is_quest talk_Axel|unlocked,completed
+    #m Matthew|"Help me with Jack"
+    #choice
+        accept_talk_Jack|Ok
+        back|No 
+
 
 *accept_talk_Melanie
 #m Matthew|"Thank you, good luck."
@@ -57,6 +77,30 @@
 #m Matthew|"Thank you, good luck."
 #quest_unlock talk_Captain
 #task_unlock talk_Captain|t1
+#exit
+
+*accept_talk_Sergeant
+#m Matthew|"Thank you, good luck."
+#quest_unlock talk_Sergeant
+#task_unlock talk_Sergeant|t1
+#exit
+
+*accept_talk_Nicole
+#m Matthew|"Thank you, good luck."
+#quest_unlock talk_Nicole
+#task_unlock talk_Nicole|t1
+#exit
+
+*accept_talk_Axel
+#m Matthew|"Thank you, good luck."
+#quest_unlock talk_Axel
+#task_unlock talk_Axel|t1
+#exit
+
+*accept_talk_Jack
+#m Matthew|"Thank you, good luck."
+#quest_unlock talk_Jack
+#task_unlock talk_Jack|t1
 #exit
 
 

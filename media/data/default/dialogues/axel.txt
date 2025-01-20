@@ -1,0 +1,24 @@
+#is_flag axel_intro,true
+    #jump loop
+
+*intro
+#m Axel|"Hello there"
+#m Go with me
+#fade_out black
+#sfx walk_melanie
+#set_flag axel_intro,true
+#stat_inc Matthew|completedquests|1
+#set_flag talk_Axel_dialog,true
+#npc_update Axel
+#m *Knock knock* 
+#set_flag achivment_talk_Axel,true
+#fade_in
+#reveal Axel
+#exit
+
+*loop
+#m Axel|"Hi there. What can I help you with?"
+#choice
+    trade_axel|Trade 
+    quests_axel|What quests do you have for me?
+    exit|Leave

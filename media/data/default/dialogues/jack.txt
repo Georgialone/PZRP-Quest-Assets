@@ -1,0 +1,24 @@
+#is_flag jack_intro,true
+    #jump loop
+
+*intro
+#m Jack|"Hello there"
+#m Go with me
+#fade_out black
+#sfx walk_melanie
+#set_flag jack_intro,true
+#stat_inc Matthew|completedquests|1
+#set_flag talk_Jack_dialog,true
+#npc_update Jack
+#m *Knock knock* 
+#set_flag achivment_talk_Jack,true
+#fade_in
+#reveal Jack
+#exit
+
+*loop
+#m Jack|"Hi there. What can I help you with?"
+#choice
+    trade_jack|Trade 
+    quests_jack|What quests do you have for me?
+    exit|Leave
