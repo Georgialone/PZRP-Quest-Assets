@@ -1,7 +1,7 @@
 require "Scripting/MFManager"
 
-local matthew_model = {
-    name = "matthew_normal",
+local captain_model = {
+    name = "captain_normal",
     script = "Base.MaleFolk",
     beard = "Long",
     haircut = { "LeftParting", {0.10588235408067703, 0.09019608050584793, 0.08627451211214066} },
@@ -12,4 +12,4 @@ local matthew_model = {
     }
 };
 
-table.insert(MFManager.templates, matthew_model);
+table.insert(MFManager.templates, captain_model);

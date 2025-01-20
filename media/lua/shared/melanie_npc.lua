@@ -13,3 +13,5 @@ local melanie_model = {
         "Base.Bag_FannyPackFront"
     }
 };
+
+table.insert(MFManager.templates, melanie_model);

@@ -1,0 +1,6 @@
+#is_quest talk_Captain|unlocked
+    #is_flag captain_intro,false
+        #npc_create Captain|captain_normal|idle|10671,10627,0|S
+        #exit
+    #npc_create Captain|captain_normal|idle|8151,11745,0|S
+    #exit
