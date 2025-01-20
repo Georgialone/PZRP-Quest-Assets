@@ -14,6 +14,7 @@
 #set_flag talk_Melanie_dialog,true
 #npc_update Melanie
 #m *Knock knock*
+#set_flag achivment_talk_Melanie,true
 #fade_in
 #reveal Melanie
 #exit

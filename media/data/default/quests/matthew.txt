@@ -5,5 +5,4 @@
     #task t2
         #set RaiseFlag|talk_Melanie_dialog
         #action Reward|Base.Money,15,common
-        #action SetFlag|achivment_talk_Melanie|true
         #action CompleteQuest|talk_Melanie
