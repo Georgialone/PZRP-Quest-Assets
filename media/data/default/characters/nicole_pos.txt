@@ -2,5 +2,5 @@
     #is_flag nicole_intro,false
         #npc_create Nicole|nicole_normal|idle|10339,12784,0|S
         #exit
-    #npc_create Nicole|nicole_normal|idle|8151,11745,0|S
+    #npc_create Nicole|nicole_normal|idle|8152,11743,0|S
     #exit

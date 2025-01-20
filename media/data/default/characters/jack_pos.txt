@@ -1,6 +1,6 @@
 #is_quest talk_Jack|unlocked
     #is_flag jack_intro,false
-        #npc_create Jack|jack_normal|idle|10760,10548,0|S
+        #npc_create Jack|jack_normal|idle|10759,10548,0|S
         #exit
-    #npc_create Jack|jack_normal|idle|8151,11745,0|S
+    #npc_create Jack|jack_normal|idle|8147,11742,0|S
     #exit

@@ -45,7 +45,7 @@
     
 #quest talk_Jack
     #task t1 
-        #set GotoLocation|10339,12784,0|building|true
+        #set GotoLocation|10759,10548,0|building|true
         #action UnlockTask|talk_Jack|t2
     #task t2
         #set RaiseFlag|talk_Jack_dialog
