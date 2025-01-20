@@ -1,6 +1,6 @@
 #is_quest talk_Melanie|unlocked
     #is_flag melanie_intro,false
-        #npc_create Melanie|npc_melanie.png|9103,11821,0
+        #npc_create Melanie|melanie_normal|idle|9103,11821,0|S
         #exit
-    #npc_create Melanie|npc_melanie.png|8149,11740,0
+    #npc_create Melanie|melanie_normal|idle|8149,11740,0|S
     #exit
