@@ -1,0 +1,2 @@
+#npc_create Sergeant|sergeant_normal|idle|8137,11740,0|S
+#exit

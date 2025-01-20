@@ -1,0 +1,2 @@
+#name Nicole|Nicole
+#set_stat Nicole|completedquests|0

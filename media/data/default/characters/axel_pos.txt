@@ -1,0 +1,2 @@
+#npc_create Axel|axel_normal|idle|8140,11740,0|S
+#exit

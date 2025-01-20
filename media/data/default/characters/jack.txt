@@ -1,0 +1,2 @@
+#name Jack|Jack
+#set_stat Jack|completedquests|0
