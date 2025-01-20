@@ -40,32 +40,46 @@
     #choice
         accept_talk_Melanie|Ok
         back|No
-#is_quest talk_Melanie|unlocked,completed
-    #m Matthew|"Help me with Captain"
-    #choice
-        accept_talk_Captain|Ok
-        back|No
-#is_quest talk_Captain|unlocked,completed
-    #m Matthew|"Help me with Sergeant"
-    #choice
-        accept_talk_Sergeant|Ok
-        back|No
-#is_quest talk_Sergeant|unlocked,completed
-    #m Matthew|"Help me with Nicole"
-    #choice
-        accept_talk_Nicole|Ok
-        back|No
-#is_quest talk_Nicole|unlocked,completed
-    #m Matthew|"Help me with Axel"
-    #choice
-        accept_talk_Axel|Ok
-        back|No
-#is_quest talk_Axel|unlocked,completed
-    #m Matthew|"Help me with Jack"
-    #choice
-        accept_talk_Jack|Ok
-        back|No 
-
+#is_quest talk_Captain|locked
+    #is_quest talk_Melanie|unlocked,completed
+        #m Matthew|"Help me with Captain"
+        #choice
+            accept_talk_Captain|Ok
+            back|No
+    #m Matthew|"Wait, you dont save Melanie"
+    #exit
+#is_quest talk_Sergeant|locked
+    #is_quest talk_Captain|unlocked,completed
+        #m Matthew|"Help me with Sergeant"
+        #choice
+            accept_talk_Sergeant|Ok
+            back|No
+    #m Matthew|"Wait, you dont save Captain"
+    #exit
+#is_quest talk_Nicole|locked
+    #is_quest talk_Sergeant|unlocked,completed
+        #m Matthew|"Help me with Nicole"
+        #choice
+            accept_talk_Nicole|Ok
+            back|No
+    #m Matthew|"Wait, you dont save Sergeant"
+    #exit
+#is_quest talk_Axel|locked
+    #is_quest talk_Nicole|unlocked,completed
+        #m Matthew|"Help me with Axel"
+        #choice
+            accept_talk_Axel|Ok
+            back|No
+    #m Matthew|"Wait, you dont save Nicole"
+    #exit
+#is_quest talk_Jack|locked
+    #is_quest talk_Axel|unlocked,completed
+        #m Matthew|"Help me with Jack"
+        #choice
+            accept_talk_Jack|Ok
+            back|No 
+    #m Matthew|"Wait, you dont save Axel"
+    #exit
 
 *accept_talk_Melanie
 #m Matthew|"Thank you, good luck."
