@@ -1,5 +1,5 @@
 #is_quest talk_Sergeant|unlocked
-    #is_flag Sergeant_intro,false
+    #is_flag sergeant_intro,false
         #npc_create Sergeant|sergeant_normal|idle|5462,9512,0|S
         #exit
     #npc_create Sergeant|sergeant_normal|idle|8150,11744,0|SE
