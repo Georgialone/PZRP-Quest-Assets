@@ -1,0 +1,2 @@
+#npc_create Jack|jack_normal|idle|8138,11740,0|S
+#exit

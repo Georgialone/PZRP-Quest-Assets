@@ -1,0 +1,2 @@
+#name Sergeant|Sergeant
+#set_stat Sergeant|completedquests|0
