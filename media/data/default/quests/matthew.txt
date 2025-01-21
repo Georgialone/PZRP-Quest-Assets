@@ -4,7 +4,7 @@
         #action UnlockTask|talk_Melanie|t2
     #task t2
         #set RaiseFlag|talk_Melanie_dialog
-        #action Reward|Base.Money,15,common
+        #action Reward|Base.Money,10,common
         #action CompleteQuest|talk_Melanie
 
 #quest talk_Captain
@@ -13,7 +13,7 @@
         #action UnlockTask|talk_Captain|t2
     #task t2
         #set RaiseFlag|talk_Captain_dialog
-        #action Reward|Base.Money,15,common
+        #action Reward|Base.Money,10,common
         #action CompleteQuest|talk_Captain
 
 #quest talk_Axel
@@ -22,7 +22,7 @@
         #action UnlockTask|talk_Axel|t2
     #task t2
         #set RaiseFlag|talk_Axel_dialog
-        #action Reward|Base.Money,15,common
+        #action Reward|Base.Money,10,common
         #action CompleteQuest|talk_Axel
 
 #quest talk_Sergeant
@@ -31,7 +31,7 @@
         #action UnlockTask|talk_Sergeant|t2
     #task t2
         #set RaiseFlag|talk_Sergeant_dialog
-        #action Reward|Base.Money,15,common
+        #action Reward|Base.Money,10,common
         #action CompleteQuest|talk_Sergeant
 
 #quest talk_Nicole
@@ -40,7 +40,7 @@
         #action UnlockTask|talk_Nicole|t2
     #task t2
         #set RaiseFlag|talk_Nicole_dialog
-        #action Reward|Base.Money,15,common
+        #action Reward|Base.Money,10,common
         #action CompleteQuest|talk_Nicole
     
 #quest talk_Jack
@@ -49,5 +49,5 @@
         #action UnlockTask|talk_Jack|t2
     #task t2
         #set RaiseFlag|talk_Jack_dialog
-        #action Reward|Base.Money,15,common
+        #action Reward|Base.Money,10,common
         #action CompleteQuest|talk_Jack
