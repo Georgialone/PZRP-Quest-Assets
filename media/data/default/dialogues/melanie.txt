@@ -3,9 +3,9 @@
 
 *intro
 #m Melanie|"Hello there"
-#m "Hey. I'm glad I was able to find you. I guess our intel was right. You okay?"
+#m You're saying|3D:Player|"Hey. I'm glad I was able to find you. I guess our intel was right. You okay?"
 #m Melanie|"Yeah. I'm fine. I'm tired of all this travelling. I need somewhere secure with people. Friendly people, that is."
-#m "I'm part of a safezone community in the region and we're looking for new members. Would you like to join us?"
+#m You're saying|3D:Player|"I'm part of a safezone community in the region and we're looking for new members. Would you like to join us?"
 #m Melanie|"Sure. I could definitely be of use. It's not like there are hospitals anymore."
 #fade_out black
 #sfx walk_melanie
