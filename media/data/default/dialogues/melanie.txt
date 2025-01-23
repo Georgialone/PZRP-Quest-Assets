@@ -26,3 +26,27 @@
     quests_melanie|What quests do you have for me?
     exit|Leave
 
+*exit
+#exit
+
+*trade_melanie
+
+*quests_melanie
+#is_quest 
+    #m Matthew|"Help me with Melanie"
+    #choice
+        accept_talk_Melanie|Ok
+        back|No
+
+*accept_talk_Melanie
+#m Matthew|"Thank you, good luck."
+#quest_unlock talk_Melanie
+#task_unlock talk_Melanie|t1
+#exit
+
+
+
+
+*back
+#jump loop
+
