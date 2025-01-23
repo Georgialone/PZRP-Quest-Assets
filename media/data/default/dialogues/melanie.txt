@@ -33,16 +33,50 @@
 *trade_melanie
 
 *quests_melanie
-#is_quest triage_Melanie|unlocked,uncompleted
-    #m Melanie|"You've already taken my quest. Do it first, then come back for a new job."
-    #m You're saying|3D:Player|"No, I'm not done yet. I'm gonna go do it now."
-    #exit
 #is_quest triage_Melanie|locked
-    #m Melanie|"Help me with Melanie"
+    #m Melanie|"Help me with painkillers"
     #choice
         accept_triage_Melanie|Ok
         back|No
     #exit
+#is_quest quarantine_Melanie|locked
+    #is_quest triage_Melanie|unlocked,completed
+    #m Melanie|"Help me with Antibiotics"
+    #choice
+        accept_quarantine_Melanie|Ok
+        back|No
+    #m Melanie|"I also need painkillers"
+    #exit
+#is_quest surgery_Melanie|locked
+    #is_quest quarantine_Melanie|unlocked,completed
+    #m Melanie|"Help me with surgery"
+    #choice
+        accept_surgery_Melanie|Ok
+        back|No
+    #m Melanie|"I also need Antibiotics"
+    #exit
+#is_quest stressed_Melanie|locked
+    #is_quest surgery_Melanie|unlocked,completed
+    #m Melanie|"Help me with cigarettes"
+    #choice
+        accept_stressed_Melanie|Ok
+        back|No
+    #m Melanie|"I also need surgery"
+    #exit
+#is_quest leg_Melanie|locked
+    #is_quest stressed_Melanie|unlocked,completed
+    #m Melanie|"Help me with splint"
+    #choice
+        accept_leg_Melanie|Ok
+        back|No
+    #m Melanie|"I also need cigarettes"
+    #exit
+#m Melanie|"I don't have anything for you to do right now. Check again later."
+#exit
+
+
+
+
 #m Melanie|"I don't have a job right now."
 #exit
 
@@ -53,14 +87,81 @@
 #task_unlock triage_Melanie|t1
 #exit
 
+*accept_quarantine_Melanie
+#m Melanie|"Thank you, good luck."
+#set_flag melanie_complete_deliver_flag,true
+#quest_unlock quarantine_Melanie
+#task_unlock quarantine_Melanie|t1
+#exit
+
+
+*accept_surgery_Melanie
+#m Melanie|"Thank you, good luck."
+#set_flag melanie_complete_deliver_flag,true
+#quest_unlock surgery_Melanie
+#task_unlock surgery_Melanie|t1
+#exit
+
+*accept_stressed_Melanie
+#m Melanie|"Thank you, good luck."
+#set_flag melanie_complete_deliver_flag,true
+#quest_unlock stressed_Melanie
+#task_unlock stressed_Melanie|t1
+#exit
+
+*accept_leg_Melanie
+#m Melanie|"Thank you, good luck."
+#set_flag melanie_complete_deliver_flag,true
+#quest_unlock leg_Melanie
+#task_unlock leg_Melanie|t1
+#exit
+
 *complete_deliver
-#deliver triage_Melanie|t1
-    #m Melanie|"Thx for deliver"
-    #set_flag melanie_complete_deliver_flag,false
-    #reward Base.Money,10,common
-    #set_flag triage_complete_flag,true
-    #exit
-#m Melanie|"I'm waiting for you to bring the pills."
+#is_quest triage_Melanie|unlocked,uncompleted
+    #deliver triage_Melanie|t1
+        #m Melanie|"Thx for deliver"
+        #set_flag melanie_complete_deliver_flag,false
+        #reward Base.Money,10,common
+        #set_flag triage_complete_flag,true
+        #exit
+    #m Melanie|"I'm waiting for you to bring the pills."
+
+#is_quest quarantine_Melanie|unlocked,uncompleted
+    #deliver quarantine_Melanie|t1
+        #m Melanie|"Thx for deliver"
+        #set_flag melanie_complete_deliver_flag,false
+        #reward Base.Money,20,common
+        #set_flag quarantine_complete_flag,true
+        #exit
+    #m Melanie|"I'm waiting for you to bring the antibiotics."
+
+#is_quest surgery_Melanie|unlocked,uncompleted
+    #deliver surgery_Melanie|t1
+        #m Melanie|"Thx for deliver"
+        #set_flag melanie_complete_deliver_flag,false
+        #reward Base.Money,15,common
+        #set_flag surgery_complete_flag,true
+        #exit
+    #m Melanie|"I'm waiting for you to bring the surgery."
+
+#is_quest stressed_Melanie|unlocked,uncompleted
+    #deliver stressed_Melanie|t1
+        #m Melanie|"Thx for deliver"
+        #set_flag melanie_complete_deliver_flag,false
+        #reward Base.Money,15,common
+        #set_flag stressed_complete_flag,true
+        #exit
+    #m Melanie|"I'm waiting for you to bring the cigarettes."
+
+#is_quest leg_Melanie|unlocked,uncompleted
+    #deliver leg_Melanie|t1
+        #m Melanie|"Thx for deliver"
+        #set_flag melanie_complete_deliver_flag,false
+        #reward Base.Money,10,common
+        #set_flag leg_complete_flag,true
+        #exit
+    #m Melanie|"I'm waiting for you to bring the splint."
+
 #exit
 
 *back
