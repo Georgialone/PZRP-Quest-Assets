@@ -58,6 +58,7 @@
     #m Melanie|"Thx for deliver"
     #set_flag melanie_complete_deliver_flag,false
     #reward Base.Money,10,common
+    #set_flag triage_complete_flag,true
     #exit
 #m Melanie|"I'm waiting for you to bring the pills."
 #exit
