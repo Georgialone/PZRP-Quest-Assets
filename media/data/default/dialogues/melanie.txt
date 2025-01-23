@@ -24,6 +24,7 @@
 #choice
     trade_melanie|Trade 
     quests_melanie|What quests do you have for me?
+    complete_deliver|Complete deliver|melanie_complete_deliver_flag
     exit|Leave
 
 *exit
@@ -32,20 +33,34 @@
 *trade_melanie
 
 *quests_melanie
-#is_quest 
-    #m Matthew|"Help me with Melanie"
+#is_quest triage_Melanie|unlocked,uncompleted
+    #m Melanie|"You've already taken my quest. Do it first, then come back for a new job."
+    #m You're saying|3D:Player|"No, I'm not done yet. I'm gonna go do it now."
+    #exit
+#is_quest triage_Melanie|locked
+    #m Melanie|"Help me with Melanie"
     #choice
-        accept_talk_Melanie|Ok
+        accept_triage_Melanie|Ok
         back|No
-
-*accept_talk_Melanie
-#m Matthew|"Thank you, good luck."
-#quest_unlock talk_Melanie
-#task_unlock talk_Melanie|t1
+    #exit
+#m Melanie|"I don't have a job right now."
 #exit
 
+*accept_triage_Melanie
+#m Melanie|"Thank you, good luck."
+#set_flag melanie_complete_deliver_flag,true
+#quest_unlock triage_Melanie
+#task_unlock triage_Melanie|t1
+#exit
 
-
+*complete_deliver
+#deliver triage_Melanie|t1
+    #m Melanie|"Thx for deliver"
+    #set_flag melanie_complete_deliver_flag,false
+    #reward Base.Money,10,common
+    #exit
+#m Melanie|"I'm waiting for you to bring the pills."
+#exit
 
 *back
 #jump loop

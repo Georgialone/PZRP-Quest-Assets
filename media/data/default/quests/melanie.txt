@@ -1,0 +1,7 @@
+#quest triage_Melanie
+    #task t1
+        #set Deliver|Base.Pills,6
+        #action UnlockTask|triage_Melanie|t2
+    #task t2
+        #set RaiseFlag|melanie_complete_deliver_flag
+        #action CompleteQuest|triage_Melanie
