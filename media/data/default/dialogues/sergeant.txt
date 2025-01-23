@@ -2,8 +2,12 @@
     #jump loop
 
 *intro
-#m Sergeant|"Hello there"
-#m Go with me
+#m Sergeant|"You're late."
+#m You're saying|3D:Player|"Where's everyone else?"
+#m Sergeant|"Gone. They wanted to go off on their own. They have families, and I wasn't going to stop them from looking."
+#m You're saying|3D:Player|"I see. Are you injured?"
+#m Sergeant|"Nope. I don't die easy."
+#m You're saying|3D:Player|"Well that's good to hear. Come on, Sarge. Let's get back to the camp."
 #fade_out black
 #sfx walk_melanie
 #set_flag sergeant_intro,true
@@ -17,7 +21,7 @@
 #exit
 
 *loop
-#m Sergeant|"Hi there. What can I help you with?"
+#m Sergeant|"Hey. What do you need?"
 #choice
     trade_sergeant|Trade 
     quests_sergeant|What quests do you have for me?

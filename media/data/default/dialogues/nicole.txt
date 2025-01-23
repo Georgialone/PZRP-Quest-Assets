@@ -2,8 +2,12 @@
     #jump loop
 
 *intro
-#m Nicole|"Hello there"
-#m Go with me
+#m Nicole|"Thank goodness you're here. I was getting worried."
+#m You're saying|3D:Player|"You're safe now. Don't worry. I'm glad that you're alive. We had no idea if you were."
+#m Nicole|"I'm good. I promise."
+#m You're saying|3D:Player|"Did anyone else from your camp come with you?"
+#m Nicole|"Not that I'm aware of. I just kept running and didn't look back."
+#m You're saying|3D:Player|"Well at least you're alright. Come on. Let's get you to the safezone."
 #fade_out black
 #sfx walk_melanie
 #set_flag nicole_intro,true
@@ -17,7 +21,7 @@
 #exit
 
 *loop
-#m Nicole|"Hi there. What can I help you with?"
+#m Nicole|"Hi! What's up?"
 #choice
     trade_nicole|Trade 
     quests_nicole|What quests do you have for me?

@@ -2,8 +2,14 @@
     #jump loop
 
 *intro
-#m Captain|"Hello there"
-#m Go with me
+#m Captain|"Thank god you're here!"
+#m You're saying|3D:Player|"Where's the rest of the platoon?"
+#m Captain|"They didn't make it. A few hours ago we were attacked while scouting the area. I'm the only one who made it back."
+#m You're saying|3D:Player|"Damn it."
+#m Captain|"They were good men. They didn't deserve to die like that."
+#m You're saying|3D:Player|"I'm sorry for your loss."
+#m Captain|"You said you had an encampment. Can we head there now?"
+#m You're saying|3D:Player|"Sure. Let's go."
 #fade_out black
 #sfx walk_melanie
 #set_flag captain_intro,true
@@ -17,7 +23,7 @@
 #exit
 
 *loop
-#m Captain|"Hi there. What can I help you with?"
+#m Captain|"Hello, soldier. What can I do for you today?"
 #choice
     trade_captain|Trade 
     quests_captain|What quests do you have for me?
