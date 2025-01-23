@@ -1,0 +1,14 @@
+*triage_Melanie_t1
+#name Deliver 6 Painkillers
+
+*quarantine_Melanie_t1
+#name Deliver 3 Antibiotics
+
+*surgery_Melanie_t1
+#name Deliver 3 Suture Needles, 1 Tweezer, 1 Suture Needle Holder
+
+*stressed_Melanie_t1
+#name Deliver 20 Cigarettes and 2 Lighters
+
+*leg_Melanie_t1
+#name Deliver 1 Splint

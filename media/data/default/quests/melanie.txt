@@ -2,34 +2,41 @@
     #task t1
         #set Deliver|Base.Pills,6
         #action UnlockTask|triage_Melanie|t2
-    #task t2
+    #task t2|hidden
         #set RaiseFlag|triage_complete_flag
         #action CompleteQuest|triage_Melanie
 
-// #quest triage_Melanie
-//     #task t1
-//         #set Deliver|Base.Pills,6
-//         #action UnlockTask|triage_Melanie|t2
-//     #task t2
-//         #action CompleteQuest|triage_Melanie
+#quest quarantine_Melanie
+    #task t1
+        #set Deliver|Base.Antibiotics,3
+        #action UnlockTask|quarantine_Melanie|t2
+    #task t2|hidden
+        #set RaiseFlag|quarantine_complete_flag
+        #action CompleteQuest|quarantine_Melanie
 
-// #quest triage_Melanie
-//     #task t1
-//         #set Deliver|Base.Pills,6
-//         #action UnlockTask|triage_Melanie|t2
-//     #task t2
-//         #action CompleteQuest|triage_Melanie
+#quest surgery_Melanie
+    #task t1
+        #set Deliver|Base.SutureNeedle,3|Base.Tweezers,1|Base.SutureNeedleHolder,1
+        #action UnlockTask|surgery_Melanie|t2
+    #task t2|hidden
+        #set RaiseFlag|surgery_complete_flag
+        #action CompleteQuest|surgery_Melanie
 
-// #quest triage_Melanie
-//     #task t1
-//         #set Deliver|Base.Pills,6
-//         #action UnlockTask|triage_Melanie|t2
-//     #task t2
-//         #action CompleteQuest|triage_Melanie
+#quest stressed_Melanie
+    #task t1
+        #set Deliver|Base.Cigarettes,20|Base.Lighter,2
+        #action UnlockTask|stressed_Melanie|t2
+    #task t2|hidden
+        #set RaiseFlag|stressed_complete_flag
+        #action CompleteQuest|stressed_Melanie
 
-// #quest triage_Melanie
-//     #task t1
-//         #set Deliver|Base.Pills,6
-//         #action UnlockTask|triage_Melanie|t2
-//     #task t2
-//         #action CompleteQuest|triage_Melanie
+#quest leg_Melanie
+    #task t1
+        #set Deliver|Base.Splint,1
+        #action UnlockTask|leg_Melanie|t2
+    #task t2|hidden
+        #set RaiseFlag|leg_complete_flag
+        #action CompleteQuest|leg_Melanie
+
+
+

@@ -1,0 +1,19 @@
+*triage_Melanie
+#name Triage
+#desc "Injuries are bound to happen, and when they occur, they are accompanied by great pain. Some of our fighters have been injured badly and are suffering. It is important to get them back on their feet so that they can fight the undead threat efficiently. I need you to start collecting painkillers. Painkillers can be found in medical buildings, bathrooms and other places. Bring me some as soon as you can so we can help treat the wounded."
+
+*quarantine_Melanie
+#name Quarantine
+#desc "A bacterial infection has swept through our camp, causing some of our fighters to perish. Without antibiotics, we won't be able to effectively fight the illness. We've moved the sick to a separate area of the camp and have been treating them there, but we can only do so much to help them. I need you to bring me some antibiotics. You can find them in medical buildings, bathrooms and other places. Get moving!"
+
+*surgery_Melanie
+#name Emergency Surgery
+#desc "A bandit sniper opened fire on us and hit one of our fighters. We quickly neutralized the threat, but the woman he shot passed. A life was lost simply because we didn't have the proper medical supplies to stop the bleeding and remove the bullet. We need to prevent something like this from happening again. I need you to go look for some surgical supplies and bring them back."
+
+*stressed_Melanie
+#name Stressed
+#desc "I need you to keep this on the down low, because I don't want anyone to judge me. I've been smoking cigarettes. Being a doctor in the apocalypse is unsurprisingly stressful, and I've found that smoking is a good way to alleviate some of that stress. The only problem is that I'm all out of cigarettes and I need a new lighter. Can you do me a favor and find me a couple new lighters and some more cigarettes?"
+
+*leg_Melanie
+#name Break A Leg
+#desc "A scavenging run went wrong when a survivor was forced to jump from the fourth floor of a building to avoid being eaten. I need you to get me a splint so that I can fix her leg. Hurry!"
