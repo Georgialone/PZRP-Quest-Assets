@@ -1,29 +1,29 @@
 *talk_Melanie_t1
-#name To find Melanie's house.
+#name To find Melanie's house. [1/2]
 *talk_Melanie_t2
-#name Talking to Melanie.
+#name Talking to Melanie. [2/2]
 
 *talk_Captain_t1
-#name To find Captain
+#name To find Captain [1/2]
 *talk_Captain_t2
-#name Talking to Captain
+#name Talking to Captain [2/2]
 
 *talk_Axel_t1
-#name To find Axel
+#name To find Axel [1/2]
 *talk_Axel_t2
-#name Talking to Axel
+#name Talking to Axel [2/2]
 
 *talk_Sergeant_t1
-#name To find Sergeant
+#name To find Sergeant [1/2]
 *talk_Sergeant_t2
-#name Talking to Sergeant
+#name Talking to Sergeant [2/2]
 
 *talk_Nicole_t1
-#name To find Nicole
+#name To find Nicole [1/2]
 *talk_Nicole_t2
-#name Talking to Nicole
+#name Talking to Nicole [2/2]
 
 *talk_Jack_t1
-#name To find Jack
+#name To find Jack [1/2]
 *talk_Jack_t2
-#name Talking to Jack
+#name Talking to Jack [2/2]
