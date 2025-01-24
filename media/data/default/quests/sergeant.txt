@@ -20,9 +20,9 @@
         #set GotoLocation|9138,11606,0|point|true
         #action UnlockTask|drop_Sergeant|t2
     #task t2
-        #set ContextAction|Check the bag|9138,11607,0|2|sergeant.txt,drop_Sergeant_sfx
-        #set_flag drop_dialogue_flag,true
-        #action UnlockTask|drop_Sergeant|t3
+        #set ContextAction|Check the bag|9138,11607,0|2,loot
+        #action RunScript|sergeant.txt,drop_Sergeant_sfx
+        #action SetFlag|drop_dialogue_flag|true
     #task t3|hidden
         #set RaiseFlag|drop_complete_flag
         #action CompleteQuest|drop_Sergeant

@@ -90,6 +90,7 @@
 #jump loop
 
 *drop_Sergeant_sfx
+#m *You're see the bag*
 #choice
     openbag|Open the bag
     dontopenbag|Dont open the bag
@@ -100,6 +101,7 @@
 *openbag
 #sfx SergeantSFX
 #wait 2
+#task_unlock drop_Sergeant|t3
 #exit
 
 *accept_capacity_Sergeant
