@@ -1,3 +1,5 @@
 UI_EN = {
     UI_RuleSet_Ammo = "Bullets",
+    UI_RuleSet_Attachments = "Attachments",
+    UI_RuleSet_Holsters = "Holsters",
 }
