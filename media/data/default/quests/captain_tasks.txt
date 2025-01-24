@@ -1,2 +1,0 @@
-*capacity_Captain_t1
-#name Deliver 100 Bullets.
