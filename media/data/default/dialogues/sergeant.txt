@@ -157,6 +157,7 @@
             #set_flag sergeant_complete_deliver_flag,false
             #reward Base.Money,10,common
             #set_flag vengeance_complete_flag,true
+            #set_flag vengeance_dialogue_flag,false
             #exit
     #m Sergeant|"Come back when you're done."
     #exit
@@ -167,6 +168,7 @@
         #set_flag sergeant_complete_deliver_flag,false
         #reward Base.Money,15,common
         #set_flag drop_complete_flag,true
+        #set_flag drop_dialogue_flag,false
         #exit
     #m Sergeant|"Come back when you're done."
     #exit
