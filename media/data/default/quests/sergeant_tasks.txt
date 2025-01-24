@@ -2,4 +2,13 @@
 #name Deliver 100 Bullets.
 
 *vengeance_Sergeant_t1
-#name Kill 200 Zombies
+#name Kill 200 Zombies.
+
+*drop_Sergeant_t1
+#name Go to the marked location on the map.
+
+*drop_Sergeant_t2
+#name Check bag.
+
+*quickdraw_Sergeant
+#name Deliver 3 Holsters (Single or Double).

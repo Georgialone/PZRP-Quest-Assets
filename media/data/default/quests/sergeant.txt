@@ -15,3 +15,30 @@
         #set RaiseFlag|vengeance_complete_flag
         #reward Base.Money,10,common
         #action CompleteQuest|vengeance_Sergeant
+
+#quest drop_Sergeant
+    #task t1
+        #set GotoLocation|9138,11606,0|point|true
+        #action UnlockTask|drop_Sergeant|t2
+    #task t2
+        #set ContextAction|Check the bag|9138,11607,0|5,Loot
+        #action UnlockTask|drop_Sergeant|t3
+    #task t3|hidden
+        #set RaiseFlag|drop_complete_flag
+        #action CompleteQuest|drop_Sergeant
+
+#quest quickdraw_Sergeant
+    #task t1
+        #set Deliver|Holsters,3
+        #action UnlockTask|quickdraw_Sergeant|t2
+    #task t2|hidden
+        #set RaiseFlag|quickdraw_complete_flag
+        #action CompleteQuest|quickdraw_Sergeant
+
+#quest gunsmith_Sergeant
+    #task t1
+        #set Deliver|Attachments,7
+        #action UnlockTask|gunsmith_Sergeant|t2
+    #task t2
+        #set RaiseFlag|gunsmith_complete_flag
+        #action CompleteQuest|gunsmith_Sergeant
