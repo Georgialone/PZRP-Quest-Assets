@@ -1,3 +1,3 @@
-*capacity_deliver
+*capacity_Captain
 #name Full Capacity
 #desc "Recently, we cleared a horde of infected and went through a lot of our reserve ammunition. If a group that large ever comes our way again, we won't be able to take it down. I need you to locate as much ammo as you can find and bring it back to me as quick as possible. Check army locations, police stations and other buildings. Corpses might also have bullets in their pockets."

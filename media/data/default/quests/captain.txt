@@ -1,6 +1,6 @@
 #quest capacity_Captain
     #task t1
-        #set Deliver|any_ammo,100
+        #set Deliver|Ammo,100
         #action UnlockTask|capacity_Captain|t2
     #task t2
         #set RaiseFlag|capacity_complete_flag

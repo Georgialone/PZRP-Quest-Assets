@@ -37,7 +37,7 @@
 
 *quests_captain
 #is_quest capacity_Captain|locked
-    #m Captain|"Help me with .45 acp bullets"
+    #m Captain|"Help me with bullets"
     #choice 
         accept_capacity_Captain|Okay
         back|No
