@@ -30,6 +30,31 @@
     complete_deliver|Complete deliver|captain_complete_deliver_flag
     exit|Leave
 
+*quests_captain
+#is_quest skinned_Captain|locked
+    #m Captain|"Help me with vests"
+    #choice
+        accept_skinned_Captain|Ok
+        back|No
+    #exit
+
+*complete_deliver
+#is_quest skinned_Captain|unlocked,uncompleted
+    #deliver skinned_Captain|t1
+        #m Captain|"Thx for deliver"
+        #set_flag captain_complete_deliver_flag,false
+        #reward Base.Money,10,common
+        #set_flag skinned_complete_flag,true
+        #exit
+    
+
+*accept_skinned_Captain
+#m Captain|"Thank you, good luck."
+#set_flag captain_complete_deliver_flag,true
+#quest_unlock skinned_Captain
+#task_unlock skinned_Captain|t1
+#exit
+
 *exit
 #m You're saying|3D:Player|"Bye."
 #m Captain|"Bye!"

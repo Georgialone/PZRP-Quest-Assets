@@ -22,3 +22,25 @@ local function is_ammo(item)
 end
 
 ItemFetcher.add_ruleset("Ammo", is_ammo);
+
+local function canned_food(item)
+    local scriptItem = item:getScriptItem();
+    if scriptItem then
+        if item:getStringItemType() == "CannedFood" and scriptItem:isCantEat() then
+            return true;
+        end
+    end
+    return false;
+end
+
+ItemFetcher.add_ruleset("CannedFood", canned_food);
+
+local function skill_book(item)
+    local item_type = item:getType();
+    if item_type ~= "Book" and item_type:starts_with("Book") then
+        return true;
+    end
+    return false;
+end
+
+ItemFetcher.add_ruleset("SkillBook", skill_book);

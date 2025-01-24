@@ -1,0 +1,7 @@
+#quest skinned_Captain
+    #task t1
+        #set Deliver|Base.Vest_BulletPolice,2
+        #action UnlockTask|skinned_Captain|t2
+    #task t2|hidden
+        #set RaiseFlag|skinned_complete_flag
+        #action CompleteQuest|skinned_Captain
