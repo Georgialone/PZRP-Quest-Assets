@@ -27,4 +27,38 @@
 #choice
     trade_captain|Trade 
     quests_captain|What quests do you have for me?
+    complete_deliver|Complete deliver|captain_complete_deliver_flag
     exit|Leave
+
+*exit
+#m You're saying|3D:Player|"Bye."
+#m Captain|"Bye!"
+#exit
+
+*quests_captain
+#is_quest capacity_Captain|locked
+    #m Captain|"Help me with .45 acp bullets"
+    #choice 
+        accept_capacity_Captain|Okay
+        back|No
+    #exit
+
+*back
+#jump loop
+
+*accept_capacity_Captain
+#m Captain|"Thank you, good luck."
+#set_flag captain_complete_deliver_flag,true
+#quest_unlock capacity_Captain
+#task_unlock capacity_Captain|t1
+#exit
+
+*complete_deliver
+#is_quest capacity_Captain|unlocked,uncompleted
+    #deliver capacity_Captain|t1
+        #m Captain|"Thx for deliver"
+        #set_flag captain_complete_deliver_flag,false
+        #reward Base.Money,15,common
+        #set_flag capacity_complete_flag,true
+        #exit
+    #m Captain|"I'm waiting for you to bring bullets"
