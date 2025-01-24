@@ -10,5 +10,8 @@
 *drop_Sergeant_t2
 #name Check bag.
 
-*quickdraw_Sergeant
+*quickdraw_Sergeant_t1
 #name Deliver 3 Holsters (Single or Double).
+
+*gunsmith_Sergeant_t1
+#name Deliver 7 attachments.

@@ -13,3 +13,7 @@
 *quickdraw_Sergeant
 #name Quickdraw
 #desc Switching to a side arm without a holster can be an inconvenience. I want to make sure that everyone at this safe zone is able to defend themselves at a moments notice. Search police stations, gun stores and other places to find holsters and bring them back to me.
+
+*gunsmith_Sergeant
+#name Gunsmith
+#desc Weapon attachments can level the playing field when dealing with hostile survivors. It's about time that we got our hands on some. Search gun stores, military locations and police stations and bring them back to me.

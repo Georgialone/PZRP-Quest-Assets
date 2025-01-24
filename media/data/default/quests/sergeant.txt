@@ -19,7 +19,7 @@
         #set GotoLocation|9138,11606,0|point|true
         #action UnlockTask|drop_Sergeant|t2
     #task t2
-        #set ContextAction|Check the bag|9138,11607,0|5,Loot
+        #set ContextAction|Check the bag|9138,11607,0|2,Loot|sergeant.txt,drop_Sergeant_sfx
         #action UnlockTask|drop_Sergeant|t3
         #set_flag drop_dialogue_flag,true
     #task t3|hidden
@@ -38,6 +38,6 @@
     #task t1
         #set Deliver|Attachments,7
         #action UnlockTask|gunsmith_Sergeant|t2
-    #task t2
+    #task t2|hidden
         #set RaiseFlag|gunsmith_complete_flag
         #action CompleteQuest|gunsmith_Sergeant
