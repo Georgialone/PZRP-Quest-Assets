@@ -4,6 +4,9 @@
 *vengeance_Sergeant_t1
 #name Kill 200 Zombies.
 
+*vengeance_Sergeant_t2
+#name Talk with sergeant
+
 *drop_Sergeant_t1
 #name Go to the marked location on the map.
 

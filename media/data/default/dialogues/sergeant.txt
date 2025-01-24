@@ -91,6 +91,7 @@
 
 *drop_Sergeant_sfx
 #sfx SergeantSFX
+#wait 2
 #exit
 
 *accept_capacity_Sergeant
