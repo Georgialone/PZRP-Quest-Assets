@@ -2,6 +2,6 @@
     #task t1
         #set Deliver|Ammo,100
         #action UnlockTask|capacity_Captain|t2
-    #task t2
+    #task t2|hidden
         #set RaiseFlag|capacity_complete_flag
         #action CompleteQuest|capacity_Captain
