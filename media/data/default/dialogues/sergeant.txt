@@ -33,7 +33,7 @@
 #m Sergeant|"Bye!"
 #exit
 
-*quests_Sergeant
+*quests_sergeant
 #is_quest capacity_Sergeant|locked
     #m Sergeant|"Recently, we cleared a horde of infected and went through a lot of our reserve ammunition." 
     #m Sergeant|"If a group that large ever comes our way again, we won't be able to take it down."
