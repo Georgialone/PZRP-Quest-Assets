@@ -32,7 +32,12 @@
 
 *quests_captain
 #is_quest skinned_Captain|locked
-    #m Captain|"Help me with vests"
+    #m Captain|"Any effective army protects their soldiers."
+    #m Captain|"We unfortunately don't have a lot of protection against bullets right now." 
+    #m Captain|"In some cases, the living are more dangerous than the undead these days."
+    #m Captain|"During the outbreak there was a heavy police presence."
+    #m Captain|"Most of them wore bullet proof vests. I need you to go and look for some."
+    #m Captain|"Police bulletproof vests can be found in police stations and off the bodies of undead officers."
     #choice
         accept_skinned_Captain|Ok
         back|No

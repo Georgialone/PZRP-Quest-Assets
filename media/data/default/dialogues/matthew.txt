@@ -36,13 +36,23 @@
 
 *three_choice
 #is_quest talk_Melanie|locked
-    #m Matthew|"Help me with Melanie"
+    #m Matthew|"I'm glad that you were able to help out." 
+    #m Matthew|"Building this safezone isn't going to be easy, but in time, we should be able to get things up and running."
+    #m Matthew|"Our first order of business is medical care."
+    #m Matthew|"We've seen what's out there, and getting injured is something that we cannot afford." 
+    #m Matthew|"When I was taking refuge with some survivors early on, I heard some talk of a traveling doctor." 
+    #m Matthew|"She was last sighted at an army quarters east of Rosewood. See if you can track her down."
     #choice
         accept_talk_Melanie|Ok
         back|No
 #is_quest talk_Captain|locked
-    #is_quest talk_Melanie|unlocked,completed
-        #m Matthew|"Help me with Captain"
+    #is_quest talk_Melanie|unlocked,completed"
+        #m Matthew|"Doctor Ross and I were flipping through some radio channels and we overheard some gunshots and yelling." 
+        #m Matthew|"We called out and we surprisingly got a response." 
+        #m Matthew|"Apparently there was an ambush at a nearby military checkpoint and a large swarm of infected had breached the line of defense."
+        #m Matthew|"The voice on the radio identified himself as Captain Michael Hess."
+        #m Matthew|"He said his platoon was falling back to a gas station in Muldraugh." 
+        #m Matthew|"See if you can make contact."
         #choice
             accept_talk_Captain|Ok
             back|No
@@ -50,7 +60,12 @@
     #exit
 #is_quest talk_Sergeant|locked
     #is_quest talk_Captain|unlocked,completed
-        #m Matthew|"Help me with Sergeant"
+        #m Matthew|"According to Captain Hess, during the chaos of the checkpoint attack, his platoon was split in two."
+        #m Matthew|"The surviving members of the second group fled north of Rosewood." 
+        #m Matthew|"Among the survivors was the weapons sergeant, Lily Shaw."
+        #m Matthew|"The captain says that if anything, Lily is likely heading to resupply on ammo and weapons in an attempt to avenge the fallen."
+        #m Matthew|"A local map shows a military surplus store north west of here in the Doe Valley region." 
+        #m Matthew|"Check it out and see if she's there."
         #choice
             accept_talk_Sergeant|Ok
             back|No
@@ -58,7 +73,12 @@
     #exit
 #is_quest talk_Nicole|locked
     #is_quest talk_Sergeant|unlocked,completed
-        #m Matthew|"Help me with Nicole"
+        #m Matthew|"There are still people out there!"
+        #m Matthew|"We recently were in contact with a survivor in the area named Nicole."
+        #m Matthew|"She didn't tell us much, but we know that her camp was attacked and she fled to March Ridge."
+        #m Matthew|"When we heard from her last, she told us that she was hiding in a church."
+        #m Matthew|"We told her that we'd come and try to find her, but when we radioed in, we didn't get any response."
+        #m Matthew|"We have no clue if she's even still alive or in that church, but we should check anyway."
         #choice
             accept_talk_Nicole|Ok
             back|No
@@ -66,7 +86,11 @@
     #exit
 #is_quest talk_Axel|locked
     #is_quest talk_Nicole|unlocked,completed
-        #m Matthew|"Help me with Axel"
+        #m Matthew|"It's been fairly dead in the region."
+        #m Matthew|"That changed three hours ago. An emergency flare was fired east of our position."
+        #m Matthew|"We're unsure exactly where it came from, but currently we believe that the flare gun was shot nearby Muldraugh, specifically, an industrial park."
+        #m Matthew|"We have no idea if this flare was an accident, or if this was done intentionally."
+        #m Matthew|"Regardless, we think that you should go see what is going on."
         #choice
             accept_talk_Axel|Ok
             back|No
@@ -74,7 +98,11 @@
     #exit
 #is_quest talk_Jack|locked
     #is_quest talk_Axel|unlocked,completed
-        #m Matthew|"Help me with Jack"
+        #m Matthew|"Multiple gunshots were heard near our location." 
+        #m Matthew|"We checked walkie talkie channels and sure enough, there was someone pleading for help." 
+        #m Matthew|"He told us that his name was Jack and that his car broke down near Muldraugh." 
+        #m Matthew|"We told him to find cover somewhere and that we would pick him up."
+        #m Matthew|"He is currently taking shelter at a local tavern. Head over to Muldraugh and rescue him."
         #choice
             accept_talk_Jack|Ok
             back|No 
