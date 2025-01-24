@@ -10,8 +10,9 @@
     #task t1
         #set KillZombie|200
         #action UnlockTask|vengeance_Sergeant|t2
+        #set_flag vengeance_dialogue_flag,true
     #task t2|hidden
-        #set_flag vengeance_complete_flag,true
+        #set RaiseFlag|vengeance_complete_flag,true
         #action CompleteQuest|vengeance_Sergeant
 
 #quest drop_Sergeant
