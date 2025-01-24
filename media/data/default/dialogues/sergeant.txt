@@ -43,6 +43,7 @@
         accept_capacity_Sergeant|Okay
         back|No
     #exit
+
 #is_quest vengeance_Sergeant|locked
     #is_quest capacity_Sergeant|unlocked,completed
     #m Sergeant|"When Captain Hess and I were fighting a group of infected at the checkpoint, we suffered heavy casualties." 
@@ -53,6 +54,7 @@
         accept_vengeance_Sergeant|Ok
         back|No
     #exit
+
 #is_quest drop_Sergeant|locked
     #is_quest vengeance_Sergeant|unlocked,completed
     #m Sergeant|"Our safe zone has been doing business with a nearby community."
@@ -64,8 +66,32 @@
         back|No
     #exit
 
+#is_quest quickdraw_Sergeant|locked
+    #is_quest drop_Sergeant|unlocked,completed
+    #m Sergeant|"Switching to a side arm without a holster can be an inconvenience."
+    #m Sergeant|"I want to make sure that everyone at this safe zone is able to defend themselves at a moments notice."
+    #m Sergeant|"Search police stations, gun stores and other places to find holsters and bring them back to me."
+    #choice 
+        accept_quickdraw_Sergeant|Ok
+        back|No
+    #exit
+#is_quest gunsmith_Sergeant|locked
+    #is_quest quickdraw_Sergeant|unlocked,completed
+    #m Sergeant|"Weapon attachments can level the playing field when dealing with hostile survivors." 
+    #m Sergeant|"It's about time that we got our hands on some."
+    #m Sergeant|"Search gun stores, military locations and police stations and bring them back to me."
+    #choice
+        accept_gunsmith_Sergeant|Ok
+        back|No
+    #exit
+
+
 *back
 #jump loop
+
+*drop_Sergeant_sfx
+#sfx SergeantSFX
+#exit
 
 *accept_capacity_Sergeant
 #m Sergeant|"Thank you, good luck."
@@ -80,6 +106,29 @@
 #quest_unlock vengeance_Sergeant
 #task_unlock vengeance_Sergeant|t1
 #exit
+
+*accept_drop_Sergeant
+#m Sergeant|"Thank you, good luck."
+#set_flag sergeant_complete_deliver_flag,true
+#quest_unlock drop_Sergeant
+#task_unlock drop_Sergeant|t1
+#exit
+
+*accept_quickdraw_Sergeant
+#m Sergeant|"Thank you, good luck."
+#set_flag sergeant_complete_deliver_flag,true
+#quest_unlock quickdraw_Sergeant
+#task_unlock quickdraw_Sergeant|t1
+#exit
+
+*accept_gunsmith_Sergeant
+#m Sergeant|"Thank you, good luck."
+#set_flag sergeant_complete_deliver_flag,true
+#quest_unlock gunsmith_Sergeant
+#task_unlock gunsmith_Sergeant|t1
+#exit
+
+
 
 *complete_deliver
 #is_quest capacity_Sergeant|unlocked,uncompleted
@@ -100,3 +149,34 @@
             #exit
     #m Sergeant|"Come back when you're done."
     #exit
+#is_quest drop_Sergeant|unlocked,uncompleted
+    #is_quest vengeance_Sergeant|unlocked,completed
+        #is_flag drop_dialogue_flag,true
+        #m You're saying|3D:Player|"I'm finished."
+        #set_flag sergeant_complete_deliver_flag,false
+        #reward Base.Money,15,common
+        #set_flag drop_complete_flag,true
+        #exit
+    #m Sergeant|"Come back when you're done."
+    #exit
+#is_quest quickdraw_Sergeant|unlocked,uncompleted
+    #is_quest drop_Sergeant|unlocked,completed
+        #deliver quickdraw_Sergeant|t1
+            #m Sergeant|"thx"
+            #set_flag sergeant_complete_deliver_flag,false
+            #reward Base.Money,10,common
+            #set_flag quickdraw_complete_flag,true
+            #exit
+        #m Sergeant|"I'm waiting for you to bring holsters"
+        #exit
+#is_quest gunsmith_Sergeant|unlocked,uncompleted
+    #is_quest quickdraw_Sergeant|unlocked,completed
+        #deliver gunsmith_Sergeant|t1
+            #m Sergeant|"thx"
+            #set_flag sergeant_complete_deliver_flag,false
+            #reward Base.Money,10,common
+            #set_flag gunsmith_complete_flag,true
+            #exit
+        #m Sergeant|"I'm waiting for you to bring attachments"
+        #exit
+#exit
