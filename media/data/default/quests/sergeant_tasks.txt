@@ -1,2 +1,5 @@
 *capacity_Sergeant_t1
 #name Deliver 100 Bullets.
+
+*vengeance_Sergeant_t1
+#name Kill 200 Zombies

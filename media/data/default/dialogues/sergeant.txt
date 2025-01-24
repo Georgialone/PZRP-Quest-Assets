@@ -40,6 +40,14 @@
         accept_capacity_Sergeant|Okay
         back|No
     #exit
+#is_quest vengeance_Sergeant|locked
+    #is_quest capacity_Sergeant|unlocked,completed
+    #m Sergeant|"Kill 200 Zombies"
+    #choice
+        accept_vengeance_Sergeant|Ok
+        back|No
+    #exit
+
 
 *back
 #jump loop
@@ -49,6 +57,12 @@
 #set_flag sergeant_complete_deliver_flag,true
 #quest_unlock capacity_Sergeant
 #task_unlock capacity_Sergeant|t1
+#exit
+
+*accept_vengeance_Sergeant
+#m Sergeant|"Thank you, good luck."
+#quest_unlock vengeance_Sergeant
+#task_unlock vengeance_Sergeant|t1
 #exit
 
 *complete_deliver

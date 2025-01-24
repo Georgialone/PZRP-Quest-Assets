@@ -3,5 +3,15 @@
         #set Deliver|Ammo,100
         #action UnlockTask|capacity_Sergeant|t2
     #task t2|hidden
-        #set RaiseFlag|sergeant_complete_deliver_flag
+        #set RaiseFlag|capacity_complete_flag
         #action CompleteQuest|capacity_Sergeant
+
+#quest vengeance_Sergeant
+    #task t1
+        #set KillZombie|200
+        #action UnlockTask|vengeance_Sergeant|t2
+    #task t2|hidden
+        #set_flag vengeance_complete_flag,true
+        #set RaiseFlag|vengeance_complete_flag
+        #reward Base.Money,10,common
+        #action CompleteQuest|vengeance_Sergeant
