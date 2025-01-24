@@ -21,7 +21,7 @@
         #set GotoLocation|9138,11606,0|point|true
         #action UnlockTask|drop_Sergeant|t2
     #task t2
-        #set ContextAction|Check the bag|9138,11607,0|5,Loot
+        #set ContextAction|Check the bag|9138,11607,0|2,Loot|sergeant.txt,drop_Sergeant_sfx
         #action UnlockTask|drop_Sergeant|t3
     #task t3|hidden
         #set RaiseFlag|drop_complete_flag
