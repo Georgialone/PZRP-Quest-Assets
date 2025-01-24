@@ -25,7 +25,7 @@
 #choice
     trade_sergeant|Trade 
     quests_sergeant|What quests do you have for me?
-    complete_deliver|Complete deliver|sergeant_complete_deliver_flag
+    complete_deliver|Complete quest|sergeant_complete_deliver_flag
     exit|Leave
 
 *exit
@@ -35,19 +35,34 @@
 
 *quests_Sergeant
 #is_quest capacity_Sergeant|locked
-    #m Sergeant|"Help me with bullets"
+    #m Sergeant|"Recently, we cleared a horde of infected and went through a lot of our reserve ammunition." 
+    #m Sergeant|"If a group that large ever comes our way again, we won't be able to take it down."
+    #m Sergeant|"I need you to locate as much ammo as you can find and bring it back to me as quick as possible."
+    #m Sergeant|"Check army locations, police stations and other buildings. Corpses might also have bullets in their pockets."
     #choice 
         accept_capacity_Sergeant|Okay
         back|No
     #exit
 #is_quest vengeance_Sergeant|locked
     #is_quest capacity_Sergeant|unlocked,completed
-    #m Sergeant|"Kill 200 Zombies"
+    #m Sergeant|"When Captain Hess and I were fighting a group of infected at the checkpoint, we suffered heavy casualties." 
+    #m Sergeant|"The only thing worse than seeing your fellow soldiers fall is having to put them down when they come back from the dead." 
+    #m Sergeant|"I want to avenge the fallen and slaughter as many infected as possible, but I can't do it alone."
+    #m Sergeant|"I need you to go out there and show them what you're made of."
     #choice
         accept_vengeance_Sergeant|Ok
         back|No
     #exit
-
+#is_quest drop_Sergeant|locked
+    #is_quest vengeance_Sergeant|unlocked,completed
+    #m Sergeant|"Our safe zone has been doing business with a nearby community."
+    #m Sergeant|"In exchange for rifles and more powerful weapons, we have provided water from our well."
+    #m Sergeant|"The dead drop is in a field nearby Rosewood, a little north of the army quarters where we found Doctor Ross."
+    #m Sergeant|"The duffle bag should be stashed nearby some hay bales. Locate it and open it up."
+    #choice 
+        accept_drop_Sergeant|Ok
+        back|No
+    #exit
 
 *back
 #jump loop
@@ -61,6 +76,7 @@
 
 *accept_vengeance_Sergeant
 #m Sergeant|"Thank you, good luck."
+#set_flag sergeant_complete_deliver_flag,true
 #quest_unlock vengeance_Sergeant
 #task_unlock vengeance_Sergeant|t1
 #exit
@@ -74,3 +90,13 @@
         #set_flag capacity_complete_flag,true
         #exit
     #m Sergeant|"I'm waiting for you to bring bullets"
+#is_quest vengeance_Sergeant|unlocked,uncompleted
+    #is_quest capacity_Sergeant|unlocked,completed
+        #is_flag vengeance_dialogue_flag,true
+            #m You're saying|3D:Player|"I'm finished."
+            #set_flag sergeant_complete_deliver_flag,false
+            #reward Base.Money,10,common
+            #set_flag vengeance_complete_flag,true
+            #exit
+    #m Sergeant|"Come back when you're done."
+    #exit

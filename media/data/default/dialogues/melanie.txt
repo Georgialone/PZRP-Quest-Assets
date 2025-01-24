@@ -34,14 +34,22 @@
 
 *quests_melanie
 #is_quest triage_Melanie|locked
-    #m Melanie|"Help me with painkillers"
+    #m Melanie|"Injuries are bound to happen, and when they occur, they are accompanied by great pain." 
+    #m Melanie|"Some of our fighters have been injured badly and are suffering." 
+    #m Melanie|"It is important to get them back on their feet so that they can fight the undead threat efficiently." 
+    #m Melanie|"I need you to start collecting painkillers. Painkillers can be found in medical buildings, bathrooms and other places."
+    #m Melanie|"Bring me some as soon as you can so we can help treat the wounded."
     #choice
         accept_triage_Melanie|Ok
         back|No
     #exit
 #is_quest quarantine_Melanie|locked
     #is_quest triage_Melanie|unlocked,completed
-    #m Melanie|"Help me with Antibiotics"
+    #m Melanie|"A bacterial infection has swept through our camp, causing some of our fighters to perish." 
+    #m Melanie|"Without antibiotics, we won't be able to effectively fight the illness." 
+    #m Melanie|"We've moved the sick to a separate area of the camp and have been treating them there, but we can only do so much to help them." 
+    #m Melanie|"I need you to bring me some antibiotics. You can find them in medical buildings, bathrooms and other places."
+    #m Melanie|"Get moving!"
     #choice
         accept_quarantine_Melanie|Ok
         back|No
@@ -49,7 +57,11 @@
     #exit
 #is_quest surgery_Melanie|locked
     #is_quest quarantine_Melanie|unlocked,completed
-    #m Melanie|"Help me with surgery"
+    #m Melanie|"A bandit sniper opened fire on us and hit one of our fighters."
+    #m Melanie|"We quickly neutralized the threat, but the woman he shot passed." 
+    #m Melanie|"A life was lost simply because we didn't have the proper medical supplies to stop the bleeding and remove the bullet." 
+    #m Melanie|"We need to prevent something like this from happening again."
+    #m Melanie|"I need you to go look for some surgical supplies and bring them back."
     #choice
         accept_surgery_Melanie|Ok
         back|No
@@ -57,7 +69,11 @@
     #exit
 #is_quest stressed_Melanie|locked
     #is_quest surgery_Melanie|unlocked,completed
-    #m Melanie|"Help me with cigarettes"
+    #m Melanie|"I need you to keep this on the down low, because I don't want anyone to judge me." 
+    #m Melanie|"I've been smoking cigarettes."
+    #m Melanie|"Being a doctor in the apocalypse is unsurprisingly stressful, and I've found that smoking is a good way to alleviate some of that stress."
+    #m Melanie|"The only problem is that I'm all out of cigarettes and I need a new lighter."
+    #m Melanie|"Can you do me a favor and find me a couple new lighters and some more cigarettes?"
     #choice
         accept_stressed_Melanie|Ok
         back|No
@@ -65,7 +81,8 @@
     #exit
 #is_quest leg_Melanie|locked
     #is_quest stressed_Melanie|unlocked,completed
-    #m Melanie|"Help me with splint"
+    #m Melanie|"A scavenging run went wrong when a survivor was forced to jump from the fourth floor of a building to avoid being eaten." 
+    #m Melanie|"I need you to get me a splint so that I can fix her leg. Hurry!"
     #choice
         accept_leg_Melanie|Ok
         back|No
