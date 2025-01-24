@@ -39,6 +39,6 @@
     #task t1
         #set Deliver|Attachments,7
         #action UnlockTask|gunsmith_Sergeant|t2
-    #task t2
+    #task t2|hidden
         #set RaiseFlag|gunsmith_complete_flag
         #action CompleteQuest|gunsmith_Sergeant
