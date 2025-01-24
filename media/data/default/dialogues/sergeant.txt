@@ -90,6 +90,14 @@
 #jump loop
 
 *drop_Sergeant_sfx
+#choice
+    openbag|Open the bag
+    dontopenbag|Dont open the bag
+
+*dontopenbag
+#exit
+
+*openbag
 #sfx SergeantSFX
 #exit
 
