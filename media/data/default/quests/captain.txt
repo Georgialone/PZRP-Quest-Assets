@@ -31,8 +31,8 @@
         #action RunScript|captain.txt,equip_detonator_sfx
     #task t3
         #set GotoLocation|8086,10224,0|point|true
-        #action RunScript|captain.txt,detonate_sfx
         #action SetFlag|protocol_dialogue_flag|true
+        #action RunScript|captain.txt,detonate_sfx
     #task t4|hidden
         #set RaiseFlag|protocol_complete_flag
         #action CompleteQuest|protocol_Captain
