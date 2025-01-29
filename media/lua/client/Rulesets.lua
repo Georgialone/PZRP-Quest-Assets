@@ -11,21 +11,9 @@ local ammo_types = {
     "ShotgunShells"
 }
 
-local hoarder = {
-    "PistolCase1",
-    "PistolCase2",
-    "PistolCase3",
-    "RevolverCase1",
-    "RevolverCase2",
-    "RevolverCase3"
-}
-
 local function is_hoarder(item) 
-    local item_type = item:getType();
-    for i=1, #hoarder do
-        if hoarder[i] == item_type then
-            return true;
-        end
+    if item:getScriptItem():getDisplayCategory() == "Container" then
+        return true;
     end
     return false;
 end

@@ -25,14 +25,12 @@
 #quest protocol_Captain
     #task t1
         #set GotoLocation|8136,10238,0|point|true
+        #action RunScript|captain.txt,spawn_zombie
         #action UnlockTask|protocol_Captain|t2
     #task t2
         #set Secure|8100,10223,8218,10253,0
         #action RunScript|captain.txt,equip_detonator_sfx
-    #task t3
-        #set GotoLocation|8086,10224,0|point|true
         #action RunScript|captain.txt,detonate_sfx
-        #action SetFlag|protocol_dialogue_flag|true
-    #task t4
+    #task t3|hidden
         #set RaiseFlag|protocol_complete_flag
         #action CompleteQuest|protocol_Captain
