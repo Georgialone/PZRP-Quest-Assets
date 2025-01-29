@@ -25,4 +25,135 @@
 #choice
     trade_nicole|Trade 
     quests_nicole|What quests do you have for me?
+    complete_deliver|Complete deliver|nicole_complete_deliver_flag
     exit|Leave
+
+*exit
+#exit
+
+*trade_nicole
+
+*quests_nicole
+#is_quest tooth_Nicole|locked
+    #m Nicole|"God, I miss being able to walk to the store and buy sweets whenever I wanted to."
+    #m Nicole|"Now I have to stab walking corpses until the end of time."
+    #m Nicole|"If you could do me a favor and get some treats, I'll share some with you."
+    #m Nicole|"You can find sweets at convenience stores and candy stores."
+    #m Nicole|"If you can do that for me, I'll be forever in your debt."
+    #choice
+        accept_tooth_Nicole|Ok
+        back|No
+    #exit
+#is_quest stockpile_Nicole|locked
+    #is_quest tooth_Nicole|unlocked,completed
+    #m Nicole|"I've been doing inventory on our food storage and things aren't looking that great." 
+    #m Nicole|"According to my calculations, we have enough food to last us a week, maybe more." 
+    #m Nicole|"When that happens, people will panic and turn on each other."
+    #m Nicole|"We can't let that happen. Canned food is our best bet."
+    #m Nicole|"It has a long shelf life and is fairly healthy."
+    #m Nicole|"Canned food can be found in grocery stores and houses, so it's a good idea to start there."
+    #choice
+        accept_stockpile_Nicole|Ok
+        back|No
+    #m Nicole|"I also need Jelly Beans"
+    #exit
+#is_quest prep_Nicole|locked
+    #is_quest stockpile_Nicolee|unlocked,completed
+    #m Nicole|"I'm going to need some cooking and baking stuff if you want some good food."
+    #m Nicole|"I currently don't have anything since I was forced to flee my home."
+    #m Nicole|"If you would be so kind to find me some oven mitts, you can have all the bread you desire."
+    #choice
+        accept_prep_Nicole|Ok
+        back|No
+    #m Nicole|"I also need Canned Food"
+    #exit
+#is_quest ichthyologist_Nicole|locked
+    #is_quest prep_Nicole|unlocked,completed
+    #m Nicole|"It's time to expand our horizons here at the safe zone."
+    #m Nicole|"There are many bodies of water nearby that are practically untapped."
+    #m Nicole|"If you can bring me the proper supplies, I can organize a fishing group."
+    #choice
+        accept_ichthyologist_Nicole|Ok
+        back|No
+    #m Nicole|"I also need Oven Mitt"
+    #exit
+
+#m Nicole|"I don't have a job right now."
+#exit
+
+*accept_tooth_Nicole
+#m Nicole|"Thank you, good luck."
+#set_flag nicole_complete_deliver_flag,true
+#quest_unlock tooth_Nicole
+#task_unlock tooth_Nicole|t1
+#exit
+
+*accept_stockpile_Nicole
+#m Nicole|"Thank you, good luck."
+#set_flag nicole_complete_deliver_flag,true
+#quest_unlock stockpile_Nicole
+#task_unlock stockpile_Nicole|t1
+#exit
+
+*accept_prep_Nicole
+#m Nicole|"Thank you, good luck."
+#set_flag nicole_complete_deliver_flag,true
+#quest_unlock prep_Nicole
+#task_unlock prep_Nicole|t1
+#exit
+
+*accept_ichthyologist_Nicole
+#m Nicole|"Thank you, good luck."
+#set_flag nicole_complete_deliver_flag,true
+#quest_unlock ichthyologist_Nicole
+#task_unlock ichthyologist_Nicole|t1
+#exit
+
+
+*complete_deliver
+#is_quest tooth_Nicole|unlocked,uncompleted
+    #deliver tooth_Nicole|t1
+        #m Nicole|"Thx for deliver"
+        #set_flag nicole_complete_deliver_flag,false
+        #reward Base.Money,5,common
+        #set_flag nicole_complete_flag,true
+        #exit
+    #m Nicole|"I'm waiting for you to bring the Jelly Beans."
+
+#is_quest stockpile_Nicole|unlocked,uncompleted
+    #is_quest tooth_Nicole|unlocked,completed
+        #deliver stockpile_Nicole|t1
+            #m Nicole|"Thx for deliver"
+            #set_flag nicole_complete_deliver_flag,false
+            #reward Base.Money,10,common
+            #set_flag nicole_complete_flag,true
+            #exit
+        #m Nicole|"I'm waiting for you to bring the Canned Food."
+
+#is_quest prep_Nicole|unlocked,uncompleted
+    #is_quest stockpile_Nicole|unlocked,completed
+        #deliver prep_Nicole|t1
+            #m Nicole|"Thx for deliver"
+            #set_flag nicole_complete_deliver_flag,false
+            #reward Base.Money,10,common
+            #set_flag nicole_complete_flag,true
+            #exit
+        #m Nicole|"I'm waiting for you to bring the Oven mitts."
+    
+#is_quest ichthyologist_Nicole|unlocked,uncompleted
+    #is_quest prep_Nicole|unlocked,completed
+        #deliver ichthyologist_Nicole|t1
+            #m Nicole|"Thx for deliver"
+            #set_flag nicole_complete_deliver_flag,false
+            #reward Base.Money,15,common
+            #set_flag nicole_complete_flag,true
+            #exit
+        #m Nicole|"I'm waiting for you to bring the Fried Fish."
+
+
+
+
+#exit
+
+*back
+#jump loop
