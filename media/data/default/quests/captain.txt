@@ -32,4 +32,5 @@
         #action RunScript|captain.txt,detonate_sfx
     #task t3|hidden
         #set RaiseFlag|protocol_complete_flag
+        #action Reward|Base.Money,10,common
         #action CompleteQuest|protocol_Captain
