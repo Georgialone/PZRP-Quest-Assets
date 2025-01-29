@@ -39,7 +39,7 @@
         #action RunScript|nicole.txt,cargo_gunfight
     #task t3
         #set ContextAction|Examine the container.|10121,8875,0|10,Loot
-        #action UnlockTask|cargo_Nicole|t4
+        #action RunScript|nicole.txt,container_open
     #task t4|hidden
         #set RaiseFlag|cargo_complete_flag
         #action CompleteQuest|cargo_Nicole

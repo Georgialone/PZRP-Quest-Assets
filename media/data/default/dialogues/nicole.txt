@@ -78,6 +78,18 @@
     #m Nicole|"I also need Oven Mitt"
     #exit
 
+#is_quest cargo_Nicole|locked
+    #is_quest ichthyologist_Nicole|unlocked,completed
+    #m Nicole|"One of our allies called in about ten minutes ago informing us that one of their shipment teams was attacked by bandits." 
+    #m Nicole|"All but one box was left untouched."
+    #m Nicole|"Allied forces are currently holding their position, but are quickly being overrun, so find that cargo and secure it before the enemy does."
+    #choice
+        accept_cargo_Nicole|Ok
+        back|No
+    #m Nicole|"I also need Fried Fish"
+    #exit
+
+
 #m Nicole|"I don't have a job right now."
 #exit
 
@@ -107,6 +119,34 @@
 #set_flag nicole_complete_deliver_flag,true
 #quest_unlock ichthyologist_Nicole
 #task_unlock ichthyologist_Nicole|t1
+#exit
+
+*accept_cargo_Nicole
+#m Nicole|"Thank you, good luck."
+#set_flag nicole_complete_deliver_flag,true
+#quest_unlock cargo_Nicole
+#task_unlock cargo_Nicole|t1
+#exit
+
+*cargo_gunfight
+#sfx Cargo_Gunfight 
+#wait 23
+#task_unlock cargo_Nicole|t3
+#exit
+
+*container_open
+#choice
+    open_container|Open container
+    dont_open_container|Leave
+
+*dont_open_container
+#exit
+
+*open_container
+#sfx Contaner_Open 
+#wait 2
+#set_flag cargo_complete_flag,true
+#task_unlock cargo_Nicole|t4
 #exit
 
 
@@ -149,9 +189,6 @@
             #set_flag nicole_complete_flag,true
             #exit
         #m Nicole|"I'm waiting for you to bring the Fried Fish."
-
-
-
 
 #exit
 
