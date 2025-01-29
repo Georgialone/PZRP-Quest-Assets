@@ -6,3 +6,15 @@
 
 *blackout_Captain_t1
 #name Deliver 25 Electronic Scraps
+
+*protocol_Captain_t1
+#name Travel to Army Barracks [1/4]
+
+*protocol_Captain_t2
+#name Clear the area of infected [2/4]
+
+*protocol_Captain_t3
+#name Wait until the charges detonate [3/4]
+
+*protocol_Captain_t4
+#name Tell the captain about the mission accomplished [4/4]

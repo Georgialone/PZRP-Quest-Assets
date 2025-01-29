@@ -9,3 +9,7 @@
 *blackout_Captain
 #name Blackout
 #desc The safe zone generator has been consistently shutting off without warning. Without a steady and reliable source of power for our lights, we aren't safe when the sun goes down. To prevent any future issues, I've decided that we need to fix this problem right away. Start looking for scrap electronics. With the right amount, we'll be able to make necessary repairs.
+
+*protocol_Captain
+#name Detonation Protocol
+#desc The captain and I have decided that we need to expand our search zones. The only way to do safely is remove hostiles from the area. We've set charges at their base about a quarter mile away, all we need you to do is head to the army barracks north of Rosewood, clear the area and detonate the charges.
