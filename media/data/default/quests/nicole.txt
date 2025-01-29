@@ -1,0 +1,38 @@
+#quest tooth_Nicole
+    #task t1
+        #set Deliver|Base.JellyBeans,5
+        #action UnlockTask|tooth_Nicole|t2
+    #task t2|hidden
+        #set RaiseFlag|tooth_complete_flag
+        #action CompleteQuest|tooth_Nicole
+
+#quest stockpile_Nicole
+    #task t1
+        #set Deliver|CannedFood,15
+        #action UnlockTask|stockpile_Nicole|t2
+    #task t2|hidden
+        #set RaiseFLag|stockpile_complete_flag
+        #action CompleteQuest|stockpile_Nicole 
+
+#quest prep_Nicole
+    #task t1 
+        #set Deliver|Base.OvenMitt,2
+        #action UnlockTask|prep_Nicole|t2
+    #task t2 |hidden
+        #set RaiseFLag|prep_complete_flag
+        #action CompleteQuest|prep_Nicole
+
+#quest ichthyologist_Nicole
+    #task t1
+        #set Deliver|Base.WoodenStick,3|Base.Twine,3
+        #action UnlockTask|ichthyologist_Nicole|t2
+    #task t2|hidden
+        #set RaiseFLag|ichthyologist_complete_flag
+        #action CompleteQuest|ichthyologist_Nicole
+
+// #quest cargo_Nicole
+//     #task t1 
+//         #set GotoLocation|10121,8875,0|point|true
+//         #action UnlockTask|cargo_Nicole|t2
+//     #task t2
+        

@@ -1,0 +1,19 @@
+*tooth_Nicole
+#name Sweet Tooth
+#desc God, I miss being able to walk to the store and buy sweets whenever I wanted to. Now I have to stab walking corpses until the end of time. If you could do me a favor and get some treats, I'll share some with you. You can find sweets at convenience stores and candy stores. If you can do that for me, I'll be forever in your debt.
+
+*stockpile_Nicole
+#name Stockpile
+#desc I've been doing inventory on our food storage and things aren't looking that great. According to my calculations, we have enough food to last us a week, maybe more. When that happens, people will panic and turn on each other. We can't let that happen. Canned food is our best bet. It has a long shelf life and is fairly healthy. Canned food can be found in grocery stores and houses, so it's a good idea to start there.
+
+*prep_Nicole
+#name Meal Prep
+#desc I'm going to need some cooking and baking stuff if you want some good food. I currently don't have anything since I was forced to flee my home. If you would be so kind to find me some oven mitts, you can have all the bread you desire.
+
+*ichthyologist_Nicole
+#name Ichthyologist
+#desc It's time to expand our horizons here at the safe zone. There are many bodies of water nearby that are practically untapped. If you can bring me the proper supplies, I can organize a fishing group.
+
+*cargo_Nicole
+#name Cargo
+#desc One of our allies called in about ten minutes ago informing us that one of their shipment teams was attacked by bandits. All but one box was left untouched. Allied forces are currently holding their position, but are quickly being overrun, so find that cargo and secure it before the enemy does.
