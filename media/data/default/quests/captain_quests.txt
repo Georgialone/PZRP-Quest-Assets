@@ -1,0 +1,11 @@
+*skinned_Captain
+#name Thick Skinned
+#desc Any effective army protects their soldiers. We unfortunately don't have a lot of protection against bullets right now. In some cases, the living are more dangerous than the undead these days. During the outbreak there was a heavy police presence. Most of them wore bullet proof vests. I need you to go and look for some. Police bulletproof vests can be found in police stations and off the bodies of undead officers.
+
+*hoarder_Captain
+#name Hoarder
+#desc The safe zone storage room is currently full and we don't have enough containers to place all of our miscellaneous gear. It's time for an upgrade! Look around for containers and bring them back here when you get the chance. Handheld bags can be found in trash cans, stores, houses and various other places. Get moving!
+
+*blackout_Captain
+#name Blackout
+#desc The safe zone generator has been consistently shutting off without warning. Without a steady and reliable source of power for our lights, we aren't safe when the sun goes down. To prevent any future issues, I've decided that we need to fix this problem right away. Start looking for scrap electronics. With the right amount, we'll be able to make necessary repairs.

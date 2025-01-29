@@ -1,0 +1,8 @@
+*skinned_Captain_t1
+#name Deliver 2 Police Bulletproof Vests
+
+*hoarder_Captain_t1
+#name Deliver 20 Handheld Bags
+
+*blackout_Captain_t1
+#name Deliver 25 Electronic Scraps

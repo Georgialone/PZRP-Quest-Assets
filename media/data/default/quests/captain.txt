@@ -5,3 +5,23 @@
     #task t2|hidden
         #set RaiseFlag|skinned_complete_flag
         #action CompleteQuest|skinned_Captain
+
+#quest hoarder_Captain
+    #task t1
+        #set Deliver|Hoarder,20
+        #action UnlockTask|hoarder_Captain|t2
+    #task t2|hidden
+        #set RaiseFlag|hoarder_complete_flag
+        #action CompleteQuest|hoarder_Captain
+
+#quest blackout_Captain
+    #task t1
+        #set Deliver|Base.ElectronicsScrap,25
+        #action UnlockTask|blackout_Captain|t2
+    #task t2|hidden
+        #set RaiseFLag|blackout_complete_flag
+        #action CompleteQuest|blackout_Captain
+
+#quest protocol_Captain
+// custom quest
+       

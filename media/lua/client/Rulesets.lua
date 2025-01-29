@@ -11,6 +11,25 @@ local ammo_types = {
     "ShotgunShells"
 }
 
+local hoarder = {
+    "PistolCase1",
+    "PistolCase2",
+    "PistolCase3",
+    "RevolverCase1",
+    "RevolverCase2",
+    "RevolverCase3"
+}
+
+local function is_hoarder(item) 
+    local item_type = item:getType();
+    for i=1, #hoarder do
+        if hoarder[i] == item_type then
+            return true;
+        end
+    end
+    return false;
+end
+
 local function is_ammo(item) 
     local item_type = item:getType();
     for i=1, #ammo_types do
@@ -57,5 +76,6 @@ end
 ItemFetcher.add_ruleset("Attachments", is_attachments);
 ItemFetcher.add_ruleset("Holsters", is_holsters);
 ItemFetcher.add_ruleset("Ammo", is_ammo);
+ItemFetcher.add_ruleset("Hoarder", is_hoarder);
 ItemFetcher.add_ruleset("CannedFood", canned_food);
 ItemFetcher.add_ruleset("SkillBook", skill_book);
