@@ -26,7 +26,6 @@
     #task t1
         #set GotoLocation|8136,10238,0|point|true
         #action RunScript|captain.txt,spawn_zombie
-        #action UnlockTask|protocol_Captain|t2
     #task t2
         #set Secure|8100,10223,8218,10253,0
         #action RunScript|captain.txt,equip_detonator_sfx
