@@ -43,6 +43,37 @@
         back|No
     #exit
 
+#is_quest hoarder_Captain|locked
+    #is_quest skinned_Captain|unlocked,completed
+    #m Captain|"The safe zone storage room is currently full and we don't have enough containers to place all of our miscellaneous gear." 
+    #m Captain|"It's time for an upgrade! Look around for containers and bring them back here when you get the chance." 
+    #m Captain|"Handheld bags can be found in trash cans, stores, houses and various other places."
+    #m Captain|"Get moving!"
+    #choice
+        accept_hoarder_Captain|Ok
+        back|No
+
+#is_quest blackout_Captain|locked
+    #is_quest hoarder_Captain|unlocked,completed
+    #m Captain|"The safe zone generator has been consistently shutting off without warning." 
+    #m Captain|"Without a steady and reliable source of power for our lights, we aren't safe when the sun goes down." 
+    #m Captain|"To prevent any future issues, I've decided that we need to fix this problem right away." 
+    #m Captain|"Start looking for scrap electronics."
+    #m Captain|"With the right amount, we'll be able to make necessary repairs."
+    #choice
+        accept_blackout_Captain|Ok
+        back|No
+
+#is_quest protocol_Captain|locked
+    #is_quest blackout_Captain|unlocked,completed
+    #m Captain|"The captain and I have decided that we need to expand our search zones." 
+    #m Captain|"The only way to do safely is remove hostiles from the area."
+    #m Captain|"We've set charges at their base about a quarter mile away, all we need you to do is head to the army barracks north of Rosewood, clear the area and detonate the charges."
+    #choice
+        accept_protocol_Captain|Ok
+        back|No
+
+
 *complete_deliver
 #is_quest skinned_Captain|unlocked,uncompleted
     #deliver skinned_Captain|t1
@@ -51,7 +82,34 @@
         #reward Base.Money,10,common
         #set_flag skinned_complete_flag,true
         #exit
-    
+
+#is_quest hoarder_Captain|unlocked,uncompleted
+    #is_quest skinned_Captain|unlocked,completed
+        #deliver hoarder_Captain|t1
+        #m Captain|"Thx for deliver"
+        #set_flag captain_complete_deliver_flag,false
+        #reward Base.Money,10,common
+        #set_flag hoarder_complete_flag,true
+        #exit
+
+#is_quest blackout_Captain|unlocked,uncompleted
+    #is_quest hoarder_Captain|unlocked,completed
+        #deliver blackout_Captain|t1
+        #m Captain|"Thx for deliver"
+        #set_flag captain_complete_deliver_flag,false
+        #reward Base.Money,15,common
+        #set_flag blackout_complete_flag,true
+        #exit
+
+#is_quest protocol_complete_flag|unlocked,uncompleted
+    #is_quest blackout_Captain|unlocked,completed
+        #is_flag protocol_dialogue_flag,true
+        #m You're saying|3D:Player|"I'm finished."
+        #set_flag sergeant_complete_deliver_flag,false
+        #reward Base.Money,10,common
+        #set_flag protocol_complete_flag,true
+        #set_flag protocol_dialogue_flag,false
+        #exit
 
 *accept_skinned_Captain
 #m Captain|"Thank you, good luck."
@@ -59,6 +117,50 @@
 #quest_unlock skinned_Captain
 #task_unlock skinned_Captain|t1
 #exit
+
+*accept_hoarder_Captain
+#m Captain|"Thank you, good luck."
+#set_flag captain_complete_deliver_flag,true
+#quest_unlock hoarder_Captain
+#task_unlock hoarder_Captain|t1
+#exit
+
+*accept_blackout_Captain
+#m Captain|"Thank you, good luck."
+#set_flag captain_complete_deliver_flag,true
+#quest_unlock blackout_Captain
+#task_unlock blackout_Captain|t1
+#exit
+
+*accept_protocol_Captain
+#m Captain|"Thank you, good luck."
+#set_flag captain_complete_deliver_flag,true
+#quest_unlock protocol_Captain
+#task_unlock protocol_Captain|t1
+#exit
+
+*equip_detonator_sfx
+#m *You're open the bag*
+#choice
+    equip_detonator|Equip detonator
+    dontequipdetonator|Dont equip detonator
+
+*dontequipdetonator
+#exit
+
+*equip_detonator
+#sfx equip_Detonator
+#wait 2
+#task_unlock protocol_Captain|t3
+#exit
+
+*detonate_sfx
+#sfx detonate
+#wait 3
+#task_unlock protocol_Captain|t4
+#exit
+
+
 
 *exit
 #m You're saying|3D:Player|"Bye."

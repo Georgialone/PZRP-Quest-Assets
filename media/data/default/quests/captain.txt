@@ -28,12 +28,11 @@
         #action UnlockTask|protocol_Captain|t2
     #task t2
         #set Secure|8100,10223,8218,10253,0
-        // #action RunScript| УБЕРИ ПАЛОЧКИ, тут ранскрипти звук еквипа детонатора(смотри в sfx)
-        #action UnlockTask|protocol_Captain|t3
+        #action RunScript|captain.txt,equip_detonator_sfx
     #task t3
         #set GotoLocation|8086,10224,0|point|true
-        // #action RunScript| УБЕРИ ПАЛОЧКИ, тут ранскрипти звук взрыва(смотри в sfx).
-        #action UnlockTask|protocol_Captain|t4
+        #action RunScript|captain.txt,detonate_sfx
+        #action SetFlag|protocol_dialogue_flag|true
     #task t4|hidden
         #set RaiseFlag|protocol_complete_flag
         #action CompleteQuest|protocol_Captain
