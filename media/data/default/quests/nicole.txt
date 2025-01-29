@@ -30,9 +30,17 @@
         #set RaiseFLag|ichthyologist_complete_flag
         #action CompleteQuest|ichthyologist_Nicole
 
-// #quest cargo_Nicole
-//     #task t1 
-//         #set GotoLocation|10121,8875,0|point|true
-//         #action UnlockTask|cargo_Nicole|t2
-//     #task t2
+#quest cargo_Nicole
+    #task t1 
+        #set GotoLocation|10137,8876,0|point|true
+        #action UnlockTask|cargo_Nicole|t2
+    #task t2|hidden
+        #set GotoLocation|10143,8888,10115,8863,0|false
+        #action RunScript|nicole.txt,cargo_gunfight
+    #task t3
+        #set ContextAction|Examine the container.|10121,8875,0|10,Loot
+        #action UnlockTask|cargo_Nicole|t4
+    #task t4|hidden
+        #set RaiseFlag|cargo_complete_flag
+        #action CompleteQuest|cargo_Nicole
         
