@@ -33,6 +33,6 @@
         #set GotoLocation|8086,10224,0|point|true
         #action RunScript|captain.txt,detonate_sfx
         #action SetFlag|protocol_dialogue_flag|true
-    #task t4|hidden
+    #task t4
         #set RaiseFlag|protocol_complete_flag
         #action CompleteQuest|protocol_Captain

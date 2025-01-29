@@ -160,8 +160,6 @@
 #task_unlock protocol_Captain|t4
 #exit
 
-
-
 *exit
 #m You're saying|3D:Player|"Bye."
 #m Captain|"Bye!"
