@@ -101,15 +101,6 @@
         #set_flag blackout_complete_flag,true
         #exit
 
-#is_quest protocol_complete_flag|unlocked,uncompleted
-    #is_quest blackout_Captain|unlocked,completed
-        #is_flag protocol_dialogue_flag,true
-        #m You're saying|3D:Player|"I'm finished."
-        #set_flag sergeant_complete_deliver_flag,false
-        #reward Base.Money,10,common
-        #set_flag protocol_complete_flag,true
-        #set_flag protocol_dialogue_flag,false
-        #exit
 
 *accept_skinned_Captain
 #m Captain|"Thank you, good luck."
@@ -139,6 +130,10 @@
 #task_unlock protocol_Captain|t1
 #exit
 
+*spawn_zombie
+#create_horde 8100,10223,8218,10253,0|10|true
+#task_unlock protocol_Captain|t2
+
 *equip_detonator_sfx
 #m *You're open the bag*
 #choice
@@ -150,14 +145,14 @@
 
 *equip_detonator
 #sfx equip_Detonator
-#wait 2
-#task_unlock protocol_Captain|t3
+#wait 5
 #exit
 
 *detonate_sfx
 #sfx detonate
 #wait 3
-#task_unlock protocol_Captain|t4
+#set_flag protocol_complete_flag,true
+#task_unlock protocol_Captain|t3
 #exit
 
 *exit
