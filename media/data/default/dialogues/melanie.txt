@@ -140,6 +140,7 @@
         #set_flag melanie_complete_deliver_flag,false
         #reward Base.Money,10,common
         #set_flag triage_complete_flag,true
+        #set_flag achivment_triage,true
         #exit
     #m Melanie|"I'm waiting for you to bring the pills."
 
@@ -149,6 +150,7 @@
         #set_flag melanie_complete_deliver_flag,false
         #reward Base.Money,20,common
         #set_flag quarantine_complete_flag,true
+        #set_flag achivment_quarantine,true
         #exit
     #m Melanie|"I'm waiting for you to bring the antibiotics."
 
@@ -158,6 +160,7 @@
         #set_flag melanie_complete_deliver_flag,false
         #reward Base.Money,15,common
         #set_flag surgery_complete_flag,true
+        #set_flag achivment_surgery,true
         #exit
     #m Melanie|"I'm waiting for you to bring the surgery."
 
@@ -167,6 +170,7 @@
         #set_flag melanie_complete_deliver_flag,false
         #reward Base.Money,15,common
         #set_flag stressed_complete_flag,true
+        #set_flag achivment_stressed,true
         #exit
     #m Melanie|"I'm waiting for you to bring the cigarettes."
 
@@ -176,6 +180,7 @@
         #set_flag melanie_complete_deliver_flag,false
         #reward Base.Money,10,common
         #set_flag leg_complete_flag,true
+        #set_flag achivment_leg,true
         #exit
     #m Melanie|"I'm waiting for you to bring the splint."
 

@@ -148,6 +148,7 @@
         #set_flag sergeant_complete_deliver_flag,false
         #reward Base.Money,15,common
         #set_flag capacity_complete_flag,true
+        #set_flag achivment_capacity,true
         #exit
     #m Sergeant|"I'm waiting for you to bring bullets"
 #is_quest vengeance_Sergeant|unlocked,uncompleted
@@ -158,6 +159,7 @@
             #reward Base.Money,10,common
             #set_flag vengeance_complete_flag,true
             #set_flag vengeance_dialogue_flag,false
+            #set_flag achivment_vengeance,true
             #exit
     #m Sergeant|"Come back when you're done."
     #exit
@@ -169,6 +171,7 @@
         #reward Base.Money,15,common
         #set_flag drop_complete_flag,true
         #set_flag drop_dialogue_flag,false
+        #set_flag achivment_drop,true
         #exit
     #m Sergeant|"Come back when you're done."
     #exit
@@ -179,6 +182,7 @@
             #set_flag sergeant_complete_deliver_flag,false
             #reward Base.Money,10,common
             #set_flag quickdraw_complete_flag,true
+            #set_flag achivment_quickdraw,true
             #exit
         #m Sergeant|"I'm waiting for you to bring holsters"
         #exit
@@ -189,6 +193,7 @@
             #set_flag sergeant_complete_deliver_flag,false
             #reward Base.Money,10,common
             #set_flag gunsmith_complete_flag,true
+            #set_flag achivment_gunsmith,true
             #exit
         #m Sergeant|"I'm waiting for you to bring attachments"
         #exit
