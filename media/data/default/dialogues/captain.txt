@@ -31,7 +31,17 @@
     exit|Leave
 
 *quests_captain
+#is_quest reconstruction_Captain|locked
+    #m Captain|"This place is a mess."
+    #m Captain|"There are multiple weak spots where the undead can get in."
+    #m Captain|"Unless you want to get torn apart in the middle of the night, I suggest you fix this." 
+    #m Captain|"Look for boxes of nails and bring them back here so we can begin repairs."
+    #choice
+        accept_reconstruction_Captain|Ok
+        back|No
+
 #is_quest skinned_Captain|locked
+    #is_quest|reconstruction_Captain|unlocked,completed
     #m Captain|"Any effective army protects their soldiers."
     #m Captain|"We unfortunately don't have a lot of protection against bullets right now." 
     #m Captain|"In some cases, the living are more dangerous than the undead these days."
@@ -41,7 +51,6 @@
     #choice
         accept_skinned_Captain|Ok
         back|No
-    #exit
 
 #is_quest hoarder_Captain|locked
     #is_quest skinned_Captain|unlocked,completed
@@ -72,19 +81,20 @@
     #choice
         accept_protocol_Captain|Ok
         back|No
-#is_quest reconstruction_Captain|locked
-    #is_quest protocol_Captain|unlocked,completed
-    #m Captain|"This place is a mess."
-    #m Captain|"There are multiple weak spots where the undead can get in."
-    #m Captain|"Unless you want to get torn apart in the middle of the night, I suggest you fix this." 
-    #m Captain|"Look for boxes of nails and bring them back here so we can begin repairs."
-    #choice
-        accept_reconstruction_Captain|Ok
-        back|No
+
 
 *complete_deliver
+#is_quest reconstruction_Captain|unlocked,completed
+    #deliver reconstruction_Captain|t1
+        #m Captain|"Thx for deliver"
+        #set_flag captain_complete_deliver_flag,false
+        #reward Base.Money,10,common
+        #set_flag reconstruction_complete_flag,true
+        #exit
+
 #is_quest skinned_Captain|unlocked,uncompleted
-    #deliver skinned_Captain|t1
+    #is_quest reconstruction_Captain|unlocked,completed
+        #deliver skinned_Captain|t1
         #m Captain|"Thx for deliver"
         #set_flag captain_complete_deliver_flag,false
         #reward Base.Money,10,common
@@ -109,15 +119,12 @@
         #set_flag blackout_complete_flag,true
         #exit
 
-#is_quest reconstruction_Captain|unlocked,completed
-    #is_quest blackout_Captain|unlocked,completed
-    #deliver reconstruction_Captain|t1
-        #m Captain|"Thx for deliver"
-        #set_flag captain_complete_deliver_flag,false
-        #reward Base.Money,10,common
-        #set_flag reconstruction_complete_flag,true
-        #exit
-
+*accept_reconstruction_Captain
+#m Captain|"Thank you, good luck."
+#set_flag captain_complete_deliver_flag,true
+#quest_unlock reconstruction_Captain
+#task_unlock reconstruction_Captain|t1
+#exit
 
 *accept_skinned_Captain
 #m Captain|"Thank you, good luck."
@@ -147,12 +154,6 @@
 #task_unlock protocol_Captain|t1
 #exit
 
-*accept_reconstruction_Captain
-#m Captain|"Thank you, good luck."
-#set_flag captain_complete_deliver_flag,true
-#quest_unlock reconstruction_Captain
-#task_unlock reconstruction_Captain|t1
-#exit
 
 *spawn_zombie
 #create_horde 8100,10223,8218,10253,0|10|true
