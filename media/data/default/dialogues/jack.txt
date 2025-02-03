@@ -21,4 +21,130 @@
 #choice
     trade_jack|Trade 
     quests_jack|What quests do you have for me?
+    complete_deliver|Complete deliver|jack_complete_deliver_flag
     exit|Leave
+
+*quests_jack
+#is_quest archivist_Jack|locked
+    #m Jack|"There are plenty of useful skills that one can learn. Collecting information is my main priority now."
+    #m Jack|"If you're able to bring me back some literature, we might be able to create a makeshift archive of books."
+    #m Jack|"Start looking in houses, schools and offices for anything we might be able to use!"
+    #choice
+        accept_archivist_Jack|Ok
+        back|No
+
+#is_quest informed_Jack|locked
+    #is_quest|archivist_Jack|unlocked,completed
+    #m Jack|"DIY Magazines, instruction manuals and other reading material can be found everywhere."
+    #m Jack|"The contents inside most of these magazines contain various instructions and crafting recipes."
+    #m Jack|"Get your hands on a few and bring them back to me so we can continue to build our library."
+    #choice
+        accept_informed_Jack|Ok
+        back|No
+
+#is_quest lost_Jack|locked
+    #is_quest informed_Jack|unlocked,completed
+    #m Jack|"Without a map, it's very easy to get lost in Knox Country."
+    #m Jack|"The vast forests make it impossible to see, and when night falls it only gets worse."
+    #m Jack|"Look around for maps and bring them back to me so we can ensure that nobody goes missing."
+    #choice
+        accept_lost_Jack|Ok
+        back|No
+
+#is_quest up_Jack|locked
+    #is_quest lost_Jack|unlocked,completed
+    #m Jack|"Our clothes have been ripped due to the harsh conditions of the apocalypse."
+    #m Jack|"We'll need a lot more thread than we currently have in order to start repairs."
+    #m Jack|"Look for some thread and bring it back here to me."
+    #choice
+        accept_up_Jack|Ok
+        back|No
+
+#is_quest entry_Jack|locked
+    #is_quest up_Jack|unlocked,completed
+    #m Jack|"Although unethical, looting has become normal since the outbreak."
+    #m Jack|"Nowadays, any house is fair game for burglary, but it's important that we get there before any competition does."
+    #m Jack|"Collect the proper tools for a heist and come back to me when you've got them."
+    #choice
+        accept_entry_Jack|Ok
+        back|No
+
+*complete_deliver
+#is_quest archivist_Jack|unlocked,uncompleted
+        #deliver archivist_Jack|t1
+        #m Jack|"Thx for deliver"
+        #set_flag jack_complete_deliver_flag,false
+        #reward Base.Money,20,common
+        #set_flag archivist_complete_flag,true
+        #exit
+
+#is_quest informed_Jack|unlocked,uncompleted
+    #is_quest archivist_Jack|unlocked,completed
+        #deliver informed_Jack|t1
+        #m Jack|"Thx for deliver"
+        #set_flag jack_complete_deliver_flag,false
+        #reward Base.Money,20,common
+        #set_flag informed_complete_flag,true
+        #exit
+
+#is_quest lost_Jack|unlocked,uncompleted
+    #is_quest informed_Jack|unlocked,completed
+        #deliver lost_Jack|t1
+        #m Jack|"Thx for deliver"
+        #set_flag jack_complete_deliver_flag,false
+        #reward Base.Money,10,common
+        #set_flag lost_complete_flag,true
+        #exit
+
+#is_quest up_Jack|unlocked,uncompleted
+    #is_quest lost_Jack|unlocked,completed
+        #deliver up_Jack|t1
+        #m Jack|"Thx for deliver"
+        #set_flag jack_complete_deliver_flag,false
+        #reward Base.Money,10,common
+        #set_flag up_complete_flag,true
+        #exit
+
+#is_quest entry_Jack|unlocked,uncompleted
+    #is_quest up_Jackinformed_Jack|unlocked,completed
+        #deliver entry_Jack|t1
+        #m Jack|"Thx for deliver"
+        #set_flag jack_complete_deliver_flag,false
+        #reward Base.Money,10,common
+        #set_flag entry_complete_flag,true
+        #exit
+
+*accept_archivist_Jack
+#m Jack|"Thank you, good luck."
+#set_flag jack_complete_deliver_flag,true
+#quest_unlock archivist_Jack
+#task_unlock archivist_Jack|t1
+#exit
+
+*accept_informed_Jack
+#m Jack|"Thank you, good luck."
+#set_flag jack_complete_deliver_flag,true
+#quest_unlock informed_Jack
+#task_unlock informed_Jack|t1
+#exit
+
+*accept_lost_Jack
+#m Jack|"Thank you, good luck."
+#set_flag jack_complete_deliver_flag,true
+#quest_unlock lost_Jack
+#task_unlock lost_Jack|t1
+#exit
+
+*accept_up_Jack
+#m Jack|"Thank you, good luck."
+#set_flag jack_complete_deliver_flag,true
+#quest_unlock up_Jack
+#task_unlock up_Jack|t1
+#exit
+
+*accept_entry_Jack
+#m Jack|"Thank you, good luck."
+#set_flag jack_complete_deliver_flag,true
+#quest_unlock entry_Jack
+#task_unlock entry_Jack|t1
+#exit
