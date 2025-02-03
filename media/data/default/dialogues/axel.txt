@@ -21,4 +21,117 @@
 #choice
     trade_axel|Trade 
     quests_axel|What quests do you have for me?
+    complete_deliver|Complete deliver|axel_complete_deliver_flag
     exit|Leave
+
+*quests_axel
+#is_quest trade_Axel|locked
+    #m Axel|"I noticed that you guys have cars and trucks here, and no offense, but some of them look pretty beat up."
+    #m Axel|"I could probably fix them, but there’s one issue. When you rescued me, I left my toolbox at the mechanic shop."
+    #m Axel|"If you can retrieve it for me, that would be great!"
+    #choice
+        accept_trade_Axel|Ok
+        back|No
+
+#is_quest scrapped_Axel|locked
+    #is_quest|trade_Axel|unlocked,completed
+    #m Axel|"It's always a good idea to have spare metal."
+    #m Axel|"You can use it for a variety of things."
+    #m Axel|"I've provided you with a list of things that I need. Bring everything back and I'll reward you for your work."
+    #m Axel|"Thanks!"
+    #choice
+        accept_scrapped_Axel|Ok
+        back|No
+
+#is_quest trouble_Axel|locked
+    #is_quest scrapped_Axel|unlocked,completed
+    #m Axel|"I've noticed that you guys love to run over the undead."
+    #m Axel|"Although it's an effective way to eliminate them, it's not very good for the health of your engine."
+    #m Axel|"If you continue down this path, I think it's a good idea for us to have some spare parts so that we can make necessary repairs."
+    #m Axel|"Go find some engine parts for me."
+    #choice
+        accept_trouble_Axel|Ok
+        back|No
+
+#is_quest fly_Axel|locked
+    #is_quest trouble_Axel|unlocked,completed
+    #m Axel|"One of our vehicles took heavy damage while out on a looting run."
+    #m Axel|"I've done all I can do using the tools in my toolbox, but we're going to need some more propane for the blowtorch."
+    #m Axel|"They're pretty heavy and quite large, so make sure you have enough room in your backpack. Good luck, my friend."
+    #choice
+        accept_fly_Axel|Ok
+        back|No
+
+#is_quest leftovers_Axel|locked
+    #is_quest fly_Axel|unlocked,completed
+    #m Axel|"Matthew told me that he was in contact with a small survivor encampment a day ago before they got attacked by bandits." 
+    #m Axel|"The group claimed to have food, water, ammunition, but most importantly, fuel."
+    #m Axel|"We have reason to believe that they were camped out in March Ridge nearby the school."
+    #m Axel|"See if you can find where they hid their fuel."
+    #choice
+        accept_leftovers_Axel|Ok
+        back|No
+
+*complete_deliver
+#is_quest scrapped_Axel|unlocked,uncompleted
+    #is_quest trade_Axel|unlocked,completed
+        #deliver scrapped_Axel|t1
+        #m Axel|"Thx for deliver"
+        #set_flag axel_complete_deliver_flag,false
+        #reward Base.Money,15,common
+        #set_flag scrapped_complete_flag,true
+        #exit
+
+#is_quest trouble_Axel|unlocked,uncompleted
+    #is_quest scrapped_Axel|unlocked,completed
+        #deliver trouble_Axel|t1
+        #m Axel|"Thx for deliver"
+        #set_flag axel_complete_deliver_flag,false
+        #reward Base.Money,20,common
+        #set_flag trouble_complete_flag,true
+        #exit
+
+#is_quest fly_Axel|unlocked,uncompleted
+    #is_quest trouble_Axel|unlocked,completed
+        #deliver fly_Axel|t1
+        #m Axel|"Thx for deliver"
+        #set_flag axel_complete_deliver_flag,false
+        #reward Base.Money,25,common
+        #set_flag fly_complete_flag,true
+        #exit
+
+*accept_trade_Axel
+#m Axel|"Thank you, good luck."
+#set_flag axel_complete_deliver_flag,true
+#quest_unlock trade_Axel
+#task_unlock trade_Axel|t1
+#exit
+
+*accept_scrapped_Axel
+#m Axel|"Thank you, good luck."
+#set_flag axel_complete_deliver_flag,,true
+#quest_unlock scrapped_Axel
+#task_unlock scrapped_Axel|t1
+#exit
+
+*accept_trouble_Axel
+#m Axel|"Thank you, good luck."
+#set_flag axel_complete_deliver_flag,,true
+#quest_unlock trouble_Axel
+#task_unlock trouble_Axel|t1
+#exit
+
+*accept_fly_Axel
+#m Axel|"Thank you, good luck."
+#set_flag axel_complete_deliver_flag,,true
+#quest_unlock fly_Axel
+#task_unlock fly_Axel|t1
+#exit
+
+*accept_leftovers_Axel
+#m Axel|"Thank you, good luck."
+#set_flag axel_complete_deliver_flag,,true
+#quest_unlock leftovers_Axel
+#task_unlock leftovers_Axel|t1
+#exit
+
