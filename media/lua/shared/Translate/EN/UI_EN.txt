@@ -2,7 +2,8 @@ UI_EN = {
     UI_RuleSet_Ammo = "Bullets",
     UI_RuleSet_Attachments = "Attachments",
     UI_RuleSet_Holsters = "Holsters",
-    UI_RuleSet_Hoarder = "Hoarder"
-    UI_RuleSet_CannedFood = "Canned food"
-    UI_RuleSet_SkillBook = "Skill Book"
+    UI_RuleSet_Hoarder = "Hoarder",
+    UI_RuleSet_CannedFood = "Canned food",
+    UI_RuleSet_SkillBook = "Skill Book",
+    UI_RuleSet_VehicleParts = "Vehicle Parts",
 }

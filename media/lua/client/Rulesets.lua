@@ -18,6 +18,13 @@ local function is_hoarder(item)
     return false;
 end
 
+local function is_vparts(item) 
+    if item:getScriptItem():getDisplayCategory() == "VehicleParts" then
+        return true;
+    end
+    return false;
+end
+
 local function is_ammo(item) 
     local item_type = item:getType();
     for i=1, #ammo_types do
@@ -61,6 +68,7 @@ local function is_attachments(item)
     return false;
 end
 
+ItemFetcher.add_ruleset("VehicleParts", is_vparts);
 ItemFetcher.add_ruleset("Attachments", is_attachments);
 ItemFetcher.add_ruleset("Holsters", is_holsters);
 ItemFetcher.add_ruleset("Ammo", is_ammo);

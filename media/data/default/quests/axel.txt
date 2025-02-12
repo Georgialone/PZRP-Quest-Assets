@@ -1,0 +1,31 @@
+#quest scrapped_Axel
+    #task t1
+        #set Deliver|Base.ScrapMetal,4
+        #action UnlockTask|scrapped_Axel|t2
+    #task t2|hidden
+        #set RaiseFLag|scrapped_complete_flag
+        #action CompleteQuest|scrapped_Axel
+
+#quest trouble_Axel
+    #task t1
+        #set Deliver|VehicleParts,2
+        #action UnlockTask|trouble_Axel|t2
+    #task t2|hidden
+        #set RaiseFLag|trouble_complete_flag
+        #action CompleteQuest|trouble_Axel
+
+#quest fly_Axel
+    #task t1
+        #set Deliver|Base.PropaneTank,1
+        #action UnlockTask|fly_Axel|t2
+    #task t2|hidden
+        #set RaiseFLag|fly_complete_flag
+        #action CompleteQuest|fly_Axel
+
+// #quest leftovers_Axel
+//     #task t1
+//         #set Deliver|Base.PropaneTank,1
+//         #action UnlockTask|leftovers_Axel|t2
+//     #task t2|hidden
+//         #set RaiseFLag|
+//         #action CompleteQuest|leftovers_Axel
