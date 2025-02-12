@@ -1,0 +1,15 @@
+#quest up_Jack
+    #task t1
+        #set Deliver|Base.Thread,12
+        #action UnlockTask|up_Jack|t2
+    #task t2|hidden
+        #set RaiseFlag|up_complete_flag
+        #action CompleteQuest|up_Jack
+
+#quest entry_Jack
+    #task t1
+        #set Deliver|Base.Crowbar,2
+        #action UnlockTask|entry_Jack|t2
+    #task t2|hidden
+        #set RaiseFlag|entry_complete_flag
+        #action CompleteQuest|entry_Jack
