@@ -80,6 +80,7 @@
         #set_flag axel_complete_deliver_flag,false
         #reward Base.Money,15,common
         #set_flag scrapped_complete_flag,true
+        #set_flag achivment_scrapped,true
         #exit
 
 #is_quest trouble_Axel|unlocked,uncompleted
@@ -89,6 +90,7 @@
         #set_flag axel_complete_deliver_flag,false
         #reward Base.Money,20,common
         #set_flag trouble_complete_flag,true
+        #set_flag achivment_trouble,true
         #exit
 
 #is_quest fly_Axel|unlocked,uncompleted
@@ -98,6 +100,7 @@
         #set_flag axel_complete_deliver_flag,false
         #reward Base.Money,25,common
         #set_flag fly_complete_flag,true
+        #set_flah achivment_flag,true
         #exit
 
 *accept_trade_Axel
