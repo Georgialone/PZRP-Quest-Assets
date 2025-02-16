@@ -1,3 +1,15 @@
+#quest trade_Axel
+    #task t1
+        #set GotoLocation|10186,10930,0|point|true
+        #action UnlockTask|trade_Axel|t2
+    #task t2
+        #set ContextAction|Retrieve Axel's Toolbox|10186,10930,0|10,Loot
+        #action RunScript|axel.txt,toolbox 
+        // Этот скрипт должен добавлять в инвентарь игрока toolbox(или каким-либо другим способом)
+    #task t3
+        #set RaiseFLag|trade_complete_flag
+        #action CompleteQuest|trade_Axel
+
 #quest scrapped_Axel
     #task t1
         #set Deliver|Base.ScrapMetal,4
@@ -19,7 +31,7 @@
         #set Deliver|Base.PropaneTank,1
         #action UnlockTask|fly_Axel|t2
     #task t2|hidden
-        #set RaiseFLag|fly_complete_flag
+        #set RaiseFlag|fly_complete_flag
         #action CompleteQuest|fly_Axel
 
 #quest leftovers_Axel
@@ -31,5 +43,4 @@
     //     #action RunScript|axel.txt,container_open
     // ТУТ вопрос ибо я хз хочет он тут sfx или нет, но все равно там что-то лутануть надо, поэтому прописывай у себя по описанию квеста, как он хочет.
     #task t3
-        #set RaiseFLag|leftovers_complete_flag
-        #action CompleteQuest|leftovers_Axel
+        #set RaiseFlag
