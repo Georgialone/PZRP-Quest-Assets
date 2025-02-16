@@ -1,0 +1,19 @@
+*trade_Axel
+#name Tools Of The Trade
+#desc I noticed that you guys have cars and trucks here, and no offense, but some of them look pretty beat up. I could probably fix them, but there’s one issue. When you rescued me, I left my toolbox at the mechanic shop. If you can retrieve it for me, that would be great!
+
+*scrapped_Axel
+#name Scrapped
+#desc It's always a good idea to have spare metal. You can use it for a variety of things. I've provided you with a list of things that I need. Bring everything back and I'll reward you for your work. Thanks!
+
+*trouble_Axel
+#name Engine Trouble
+#desc I've noticed that you guys love to run over the undead. Although it's an effective way to eliminate them, it's not very good for the health of your engine. If you continue down this path, I think it's a good idea for us to have some spare parts so that we can make necessary repairs. Go find some engine parts for me.
+
+*fly_Axel
+#name When Sparks Fly
+#desc One of our vehicles took heavy damage while out on a looting run. I've done all I can do using the tools in my toolbox, but we're going to need some more propane for the blowtorch. They're pretty heavy and quite large, so make sure you have enough room in your backpack. Good luck, my friend.
+
+*leftovers_Axel
+#name Leftovers
+#desc Matthew told me that he was in contact with a small survivor encampment a day ago before they got attacked by bandits. The group claimed to have food, water, ammunition, but most importantly, fuel. We have reason to believe that they were camped out in March Ridge nearby the school. See if you can find where they hid their fuel.
