@@ -1,0 +1,20 @@
+*trade_Axel_t1
+#name Go to the marked mark on the map.
+*trade_Axel_t2
+#name Retrieve Axel's Toolbox
+*trade_Axel_t3
+#name Deliver it to Axel at the safe zone.
+
+*scrapped_Axel_t1 
+#name Deliver 4 Metal Scrap
+
+*trouble_Axel_t1
+#name Deliver 2 Spare Engine Parts
+
+*fly_Axel_t1
+#name Deliver 1 Propane Tank
+
+*leftovers_Axel_t1
+#name Go to the marked mark on the map.
+*leftovers_Axel_t2
+#name Open the fuel stash.

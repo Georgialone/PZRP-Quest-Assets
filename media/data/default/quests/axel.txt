@@ -42,6 +42,7 @@
         #set ContextAction|Open the fuel stash.|9138,11606,0|10,Loot
         #action RunScript|axel.txt,container_open
     // ТУТ вопрос ибо я хз хочет он тут sfx или нет, но все равно там что-то лутануть надо, поэтому прописывай у себя по описанию квеста, как он хочет.
-    #task t3
+    #task t3|hidden
         #set RaiseFlag|leftovers_complete_flag
         #action CompleteQuest|leftovers_Axel
+    // по всей видимости не надо деливирить обратно к нпс поэтому объяви выше флаг leftovers_complete_flag
