@@ -1,2 +1,10 @@
 #name Sergeant|Sergeant
 #set_stat Sergeant|completedquests|0
+
+#desc Name: Sergeant Lily Shaw
+#desc_append Safezone Occupation: Weapons Expert
+#desc_append |                                                                            |
+#desc_append Lily was a weapons sergeant when the army was still functional. Her skillset is vast, and
+#desc_append she has made it her ultimate goal to rid the region of infected by any means possible.
+#desc_append |                                                                            |
+#desc_append Quests Completed: ${stat,Nicole,completedquests} / 5
