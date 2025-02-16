@@ -11,6 +11,22 @@ local ammo_types = {
     "ShotgunShells"
 }
 
+local ripped_sheets = {
+    "RippedSheets",
+    "RippedSheetsDirty",
+    "AlcoholRippedSheets"
+}
+
+local function is_sheets(item) 
+    local item_type = item:getType();
+    for i=1, #ripped_sheets do
+        if ripped_sheets[i] == item_type then
+            return true;
+        end
+    end
+    return false;
+end
+
 local function is_hoarder(item) 
     if item:getScriptItem():getDisplayCategory() == "Container" then
         return true;
@@ -72,6 +88,7 @@ ItemFetcher.add_ruleset("VehicleParts", is_vparts);
 ItemFetcher.add_ruleset("Attachments", is_attachments);
 ItemFetcher.add_ruleset("Holsters", is_holsters);
 ItemFetcher.add_ruleset("Ammo", is_ammo);
+ItemFetcher.add_ruleset("RippedSheets", is_sheets);
 ItemFetcher.add_ruleset("Hoarder", is_hoarder);
 ItemFetcher.add_ruleset("CannedFood", canned_food);
 ItemFetcher.add_ruleset("SkillBook", skill_book);
