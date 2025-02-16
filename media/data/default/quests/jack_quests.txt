@@ -1,0 +1,7 @@
+*up_Jack
+#name Stitched Up
+#desc Our clothes have been ripped due to the harsh conditions of the apocalypse. We'll need a lot more thread than we currently have in order to start repairs. Look for some thread and bring it back here to me.
+
+*entry_Jack
+#name Forced Entry
+#desc Although unethical, looting has become normal since the outbreak. Nowadays, any house is fair game for burglary, but it's important that we get there before any competition does. Collect the proper tools for a heist and come back to me when you've got them.
