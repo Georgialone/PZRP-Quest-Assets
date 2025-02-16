@@ -1,2 +1,10 @@
 #name Nicole|Nicole
 #set_stat Nicole|completedquests|0
+
+#desc Name: Nicole Sherman
+#desc_append Safezone Occupation: Chef
+#desc_append |                                                                            |
+#desc_append Nicole worked at a 5 star restaurant after graduating university.
+#desc_append Now, she does her best to make healthy meals with whatever ingredients she can find.
+#desc_append |                                                                            |
+#desc_append Quests Completed: ${stat,Nicole,completedquests} / 5
