@@ -22,10 +22,14 @@
         #set RaiseFLag|fly_complete_flag
         #action CompleteQuest|fly_Axel
 
-// #quest leftovers_Axel
-//     #task t1
-//         #set Deliver|Base.PropaneTank,1
-//         #action UnlockTask|leftovers_Axel|t2
-//     #task t2|hidden
-//         #set RaiseFLag|
-//         #action CompleteQuest|leftovers_Axel
+#quest leftovers_Axel
+    #task t1
+        #set GotoLocation|9138,11606,0|point|true
+        #action UnlockTask|leftovers_Axel|t2
+    // #task t2
+    //     #set ContextAction|Open the fuel stash.|9138,11606,0|10,Loot
+    //     #action RunScript|axel.txt,container_open
+    // ТУТ вопрос ибо я хз хочет он тут sfx или нет, но все равно там что-то лутануть надо, поэтому прописывай у себя по описанию квеста, как он хочет.
+    #task t3
+        #set RaiseFLag|leftovers_complete_flag
+        #action CompleteQuest|leftovers_Axel
