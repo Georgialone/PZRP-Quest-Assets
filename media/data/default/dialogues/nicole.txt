@@ -157,6 +157,7 @@
         #set_flag nicole_complete_deliver_flag,false
         #reward Base.Money,5,common
         #set_flag nicole_complete_flag,true
+        #set_flag achivment_tooth,true
         #exit
     #m Nicole|"I'm waiting for you to bring the Jelly Beans."
 
@@ -167,6 +168,7 @@
             #set_flag nicole_complete_deliver_flag,false
             #reward Base.Money,10,common
             #set_flag nicole_complete_flag,true
+            #set_flag achivment_stockpile,true
             #exit
         #m Nicole|"I'm waiting for you to bring the Canned Food."
 
@@ -177,6 +179,7 @@
             #set_flag nicole_complete_deliver_flag,false
             #reward Base.Money,10,common
             #set_flag nicole_complete_flag,true
+            #set_flag achivment_prep,true
             #exit
         #m Nicole|"I'm waiting for you to bring the Oven mitts."
     
@@ -187,6 +190,7 @@
             #set_flag nicole_complete_deliver_flag,false
             #reward Base.Money,15,common
             #set_flag nicole_complete_flag,true
+            #set_flag achivment_ichthyologist,true
             #exit
         #m Nicole|"I'm waiting for you to bring the Fried Fish."
 
