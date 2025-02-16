@@ -10,5 +10,7 @@
 *ichthyologist_Nicole_t1
 #name Deliver 3 Sturdy Sticks and 3 Twine
 
-// *cargo_Nicole_t1
-// #name Go to the marked mark on the map.
+*cargo_Nicole_t1
+#name Go to the marked mark on the map.
+*cargo_Nicole_t3
+#name Examine the container.
