@@ -5,7 +5,7 @@
     #task t2
         #set ContextAction|Retrieve Axel's Toolbox|10186,10930,0|10,Loot
         #action RunScript|axel.txt,toolbox 
-        // Этот скрипт должен добавлять в инвентарь игрока toolbox(или каким-либо другим способом)
+// Этот скрипт должен добавлять в инвентарь игрока toolbox(или каким-либо другим способом)
     #task t3
         #set RaiseFLag|trade_complete_flag
         #action CompleteQuest|trade_Axel
