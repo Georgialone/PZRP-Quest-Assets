@@ -1,2 +1,10 @@
 #name Axel|Axel
 #set_stat Axel|completedquests|0
+
+#desc Name: Axel Sanderson
+#desc_append Safezone Occupation: Mechanic
+#desc_append |                                                                            |
+#desc_append Axel graduated from high school and worked at his father's automotive repair shop before
+#desc_append the apocalypse. If it has an engine, Axel finds it interesting.
+#desc_append |                                                                            |
+#desc_append Quests Completed: ${stat,Axel,completedquests} / 5
