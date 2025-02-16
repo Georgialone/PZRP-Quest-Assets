@@ -34,3 +34,13 @@
         #set RaiseFlag|protocol_complete_flag
         #action Reward|Base.Money,10,common
         #action CompleteQuest|protocol_Captain
+
+#quest reconstruction_Captain
+    #task t1
+        #set Deliver|Base.NailsBox,25
+        #action UnlockTask|reconstruction_Captain|t2
+    #task t2|hidden
+        #set RaiseFLag|reconstruction_complete_flag
+        #action CompleteQuest|reconstruction_Captain
+// Новый квест
+// *This mission should appear before "THICK SKINNED" (Added to balance the amount of missions per NPC) 
