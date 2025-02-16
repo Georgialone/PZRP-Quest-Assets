@@ -38,5 +38,26 @@
         #set RaiseFlag|leg_complete_flag
         #action CompleteQuest|leg_Melanie
 
+#quest wrapped_Melanie
+    #task t1
+        #set Deliver|RippedSheets,45
+        #action UnlockTask|wrapped_Melanie|t2
+    #task t2
+        #set RaiseFlag|wrapped_complete_flag
+        #action CompleteQuest|wrapped_Melanie
+// Новый квест
+// This mission should appear before "THICK SKINNED" Added because bleeding is a major issue. People will need bandages at the safezone and there is currently no trade for that.
 
 
+#quest plan_Melanie
+    #task t1
+        #set GotoLocation|8084,11528,0|point|true
+        #action UnlockTask|plan_Melanie|t2
+    #task t2
+        #set ContextAction|Take the note|8084,11528,0|5,Loot
+        #action RunScript|melanie.txt,note_take
+    #task t3
+        #set RaiseFlag|plan_complete_flag
+        #action CompleteQuest|plan_Melanie
+// Новый квест, требует контекст меню как в квесте nicole, cargo_Nicole(читай описания квеста в дсе)
+// Replaces "BREAK A LEG" goes before "WRAPPED" 
