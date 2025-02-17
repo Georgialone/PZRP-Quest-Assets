@@ -35,6 +35,64 @@ local map_list = {
     "WestpointMap"
 }
 
+local skillbook_list = {
+    "BookCarpentry1",  
+    "BookCarpentry2",  
+    "BookCarpentry3",  
+    "BookCarpentry4",  
+    "BookCarpentry5",  
+    "BookCooking1",  
+    "BookCooking2",  
+    "BookCooking3",  
+    "BookCooking4",  
+    "BookCooking5",  
+    "BookFarming1" , 
+    "BookFarming2",  
+    "BookFarming3",  
+    "BookFarming4",  
+    "BookFarming5",  
+    "BookFirstAid1",  
+    "BookFirstAid2", 
+    "BookFirstAid3",  
+    "BookFirstAid4",  
+    "BookFirstAid5" , 
+    "BookElectrician1",  
+    "BookElectrician2",  
+    "BookElectrician3",  
+    "BookElectrician4",  
+    "BookElectrician5",  
+    "BookMetalWelding1,",  
+    "BookMetalWelding2",  
+    "BookMetalWelding3",  
+    "BookMetalWelding4",  
+    "BookMetalWelding5",  
+    "BookMechanic1",  
+    "BookMechanic2",  
+    "BookMechanic3",  
+    "BookMechanic4",  
+    "BookMechanic5",  
+    "BookTailoring1",  
+    "BookTailoring2,",  
+    "BookTailoring3",  
+    "BookTailoring4",  
+    "BookTailoring5",  
+    "BookFishing1",  
+    "BookFishing2", 
+    "BookFishing3",  
+    "BookFishing4",  
+    "BookFishing5",  
+    "BookTrapping1",  
+    "BookTrapping2",  
+    "BookTrapping3",  
+    "BookTrapping4",  
+    "BookTrapping5",  
+    "BookForaging1",  
+    "BookForaging2",  
+    "BookForaging3",  
+    "BookForaging4",  
+    "BookForaging5",  
+}
+
 local function is_map(item) 
     local item_type = item:getType();
     for i=1, #map_list do
@@ -89,10 +147,12 @@ local function canned_food(item)
     return false;
 end
 
-local function skill_book(item)
+local function is_skillbook(item) 
     local item_type = item:getType();
-    if item_type ~= "Book" and item_type:starts_with("Book") then
-        return true;
+    for i=1, #skillbook_list do
+        if skillbook_list[i] == item_type then
+            return true;
+        end
     end
     return false;
 end
@@ -120,4 +180,4 @@ ItemFetcher.add_ruleset("maps_list", is_map);
 ItemFetcher.add_ruleset("RippedSheets", is_sheets);
 ItemFetcher.add_ruleset("Hoarder", is_hoarder);
 ItemFetcher.add_ruleset("CannedFood", canned_food);
-ItemFetcher.add_ruleset("SkillBook", skill_book);
+ItemFetcher.add_ruleset("SkillBook", is_skillbook);
