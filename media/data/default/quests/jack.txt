@@ -8,7 +8,7 @@
 
 #quest informed_Jack
     #task t1
-        #set Deliver|TEST,25
+        #set Deliver|Magazine,25
         #action UnlockTask|informed_Jack|t2
     #task t2|hidden
         #set RaiseFlag|informed_complete_flag
