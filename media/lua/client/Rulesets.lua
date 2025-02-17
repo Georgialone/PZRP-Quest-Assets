@@ -17,6 +17,34 @@ local ripped_sheets = {
     "AlcoholRippedSheets"
 }
 
+local map_list = {
+    "Map",
+    "LouisvilleMap5",
+    "LouisvilleMap6",
+    "LouisvilleMap2",
+    "LouisvilleMap3",
+    "LouisvilleMap1",
+    "LouisvilleMap8",
+    "LouisvilleMap9",
+    "LouisvilleMap7",
+    "LouisvilleMap4",
+    "MarchRidgeMap",
+    "MuldraughMap",
+    "RiversideMap",
+    "RosewoodMap",
+    "WestpointMap"
+}
+
+local function is_map(item) 
+    local item_type = item:getType();
+    for i=1, #map_list do
+        if map_list[i] == item_type then
+            return true;
+        end
+    end
+    return false;
+end
+
 local function is_sheets(item) 
     local item_type = item:getType();
     for i=1, #ripped_sheets do
@@ -88,6 +116,7 @@ ItemFetcher.add_ruleset("VehicleParts", is_vparts);
 ItemFetcher.add_ruleset("Attachments", is_attachments);
 ItemFetcher.add_ruleset("Holsters", is_holsters);
 ItemFetcher.add_ruleset("Ammo", is_ammo);
+ItemFetcher.add_ruleset("maps_list", is_map);
 ItemFetcher.add_ruleset("RippedSheets", is_sheets);
 ItemFetcher.add_ruleset("Hoarder", is_hoarder);
 ItemFetcher.add_ruleset("CannedFood", canned_food);
