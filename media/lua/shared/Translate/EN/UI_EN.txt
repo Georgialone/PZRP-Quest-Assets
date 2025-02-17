@@ -7,4 +7,5 @@ UI_EN = {
     UI_RuleSet_SkillBook = "Skill Book",
     UI_RuleSet_VehicleParts = "Vehicle Parts",
     UI_RuleSet_RippedSheets = "Rags",
+    UI_RuleSet_maps_list = "Map",
 }
