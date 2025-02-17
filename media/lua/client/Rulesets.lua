@@ -90,8 +90,39 @@ local skillbook_list = {
     "BookForaging2",  
     "BookForaging3",  
     "BookForaging4",  
-    "BookForaging5",  
+    "BookForaging5"  
 }
+
+local magazine_list = {
+    "FishingMag1",
+    "FishingMag2",
+    "ElectronicsMag1",
+    "ElectronicsMag2",
+    "ElectronicsMag3",
+    "ElectronicsMag4",
+    "EngineerMagazine1",
+    "EngineerMagazine2",
+    "CookingMag1",
+    "CookingMag2",
+    "FarmingMag1",
+    "HuntingMag1",
+    "HuntingMag2",
+    "HuntingMag3",
+    "MetalworkMag1",
+    "MetalworkMag2",
+    "MetalworkMag3",
+    "MetalworkMag4"
+}
+
+local function is_magazine(item) 
+    local item_type = item:getType();
+    for i=1, #magazine_list do
+        if magazine_list[i] == item_type then
+            return true;
+        end
+    end
+    return false;
+end
 
 local function is_map(item) 
     local item_type = item:getType();
@@ -181,3 +212,4 @@ ItemFetcher.add_ruleset("RippedSheets", is_sheets);
 ItemFetcher.add_ruleset("Hoarder", is_hoarder);
 ItemFetcher.add_ruleset("CannedFood", canned_food);
 ItemFetcher.add_ruleset("SkillBook", is_skillbook);
+ItemFetcher.add_ruleset("Magazine", is_magazine);
