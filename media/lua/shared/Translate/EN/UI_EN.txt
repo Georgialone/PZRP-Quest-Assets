@@ -5,6 +5,7 @@ UI_EN = {
     UI_RuleSet_Hoarder = "Hoarder",
     UI_RuleSet_CannedFood = "Canned food",
     UI_RuleSet_SkillBook = "Skill Book",
+    UI_RuleSet_Magazine = "Magazines",
     UI_RuleSet_VehicleParts = "Vehicle Parts",
     UI_RuleSet_RippedSheets = "Rags",
     UI_RuleSet_maps_list = "Map",
