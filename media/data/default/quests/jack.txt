@@ -6,6 +6,14 @@
         #set RaiseFlag|archivist_complete_flag
         #action CompleteQuest|archivist_Jack
 
+#quest informed_Jack
+    #task t1
+        #set Deliver|TEST,25
+        #action UnlockTask|informed_Jack|t2
+    #task t2|hidden
+        #set RaiseFlag|informed_complete_flag
+        #action CompleteQuest|informed_Jack
+
 #quest up_Jack
     #task t1
         #set Deliver|Base.Thread,12
