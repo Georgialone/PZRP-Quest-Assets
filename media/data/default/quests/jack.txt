@@ -16,7 +16,7 @@
 
 #quest lost_Jack
     #task t1
-        #set Deliver|maps,7
+        #set Deliver|maps_list,7
         #action UnlockTask|lost_Jack|t2
     #task t2|hidden
         #set RaiseFlag|lost_complete_flag
