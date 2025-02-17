@@ -73,6 +73,14 @@
         back|No
 
 *complete_deliver
+#is_quest trade_Axel|unlocked,uncompleted
+        #deliver trade_Axel|t2
+        #m Axel|"Thx for deliver"
+        #set_flag axel_complete_deliver_flag,false
+        #reward Base.Money,10,common
+        #set_flag trade_complete_flag,true
+        #set_flag achivment_trade,true
+        #exit
 #is_quest scrapped_Axel|unlocked,uncompleted
     #is_quest trade_Axel|unlocked,completed
         #deliver scrapped_Axel|t1
