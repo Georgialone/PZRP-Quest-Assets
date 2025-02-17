@@ -1,6 +1,6 @@
 require "Scripting/ItemFetcher"
 
-local ammo_types = { 
+local ammo_types = {
     "308Bullets",
     "223Bullets",
     "556Bullets",
