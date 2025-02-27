@@ -77,6 +77,7 @@
         #reward Base.Money,20,common
         #set_flag archivist_complete_flag,true
         #set_flag achivment_archivist,true
+        #set_flag add_Jack_trades_ARCHIVIST,true
         #exit
 
 #is_quest informed_Jack|unlocked,uncompleted
@@ -87,6 +88,7 @@
         #reward Base.Money,20,common
         #set_flag informed_complete_flag,true
         #set_flag achivment_informed,true
+        #set_flag add_Jack_trades_INFORMED,true
         #exit
 
 #is_quest lost_Jack|unlocked,uncompleted
@@ -97,6 +99,7 @@
         #reward Base.Money,10,common
         #set_flag lost_complete_flag,true
         #set_flag achivment_lost,true
+        #set_flag add_Jack_trades_LOST,true
         #exit
 
 #is_quest up_Jack|unlocked,uncompleted
@@ -107,6 +110,7 @@
         #reward Base.Money,10,common
         #set_flag up_complete_flag,true
         #set_flag achivment_up,true
+        #set_flag add_Jack_trades_UP,true
         #exit
 
 #is_quest entry_Jack|unlocked,uncompleted
@@ -117,6 +121,7 @@
         #reward Base.Money,10,common
         #set_flag entry_complete_flag,true
         #set_flag achivment_entry,true
+        #set_flag add_Jack_trades_ENTRY,true
         #exit
 
 *accept_archivist_Jack
