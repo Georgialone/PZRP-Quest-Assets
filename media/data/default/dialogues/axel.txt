@@ -80,6 +80,7 @@
         #reward Base.Money,10,common
         #set_flag trade_complete_flag,true
         #set_flag achivment_trade,true
+        #set_flag add_Axel_trades_TRADE,true
         #exit
 #is_quest scrapped_Axel|unlocked,uncompleted
     #is_quest trade_Axel|unlocked,completed
@@ -89,6 +90,7 @@
         #reward Base.Money,15,common
         #set_flag scrapped_complete_flag,true
         #set_flag achivment_scrapped,true
+        #set_flag add_Axel_trades_SCRAPPED,true
         #exit
 
 #is_quest trouble_Axel|unlocked,uncompleted
@@ -99,6 +101,7 @@
         #reward Base.Money,20,common
         #set_flag trouble_complete_flag,true
         #set_flag achivment_trouble,true
+        #set_flag add_Axel_trades_TROUBLE,true
         #exit
 
 #is_quest fly_Axel|unlocked,uncompleted
@@ -109,6 +112,7 @@
         #reward Base.Money,25,common
         #set_flag fly_complete_flag,true
         #set_flah achivment_flag,true
+        #set_flag add_Axel_trades_FLY
         #exit
 
 *accept_trade_Axel
