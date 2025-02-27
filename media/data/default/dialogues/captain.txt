@@ -91,6 +91,7 @@
         #reward Base.Money,10,common
         #set_flag reconstruction_complete_flag,true
         #set_flag achivment_reconstruction,true
+        #set_flag add_Captain_trades_RECONSTRUCTION,true
         #exit
 
 #is_quest skinned_Captain|unlocked,uncompleted
@@ -101,6 +102,7 @@
         #reward Base.Money,10,common
         #set_flag skinned_complete_flag,true
         #set_flag achivment_skinned,true
+        #set_flag add_Captain_trades_SKINNED,true
         #exit
 
 #is_quest hoarder_Captain|unlocked,uncompleted
@@ -111,6 +113,7 @@
         #reward Base.Money,10,common
         #set_flag hoarder_complete_flag,true
         #set_flag achivment_hoarder,true
+        #set_flag add_Captain_trades_HOARDER,true
         #exit
 
 #is_quest blackout_Captain|unlocked,uncompleted
@@ -121,6 +124,7 @@
         #reward Base.Money,15,common
         #set_flag blackout_complete_flag,true
         #set_flag achivment_blackout,true
+        #set_flag add_Captain_trades_BLACKOUT,true
         #exit
 
 *accept_reconstruction_Captain
